@@ -1,0 +1,2533 @@
+[
+    {
+        "id": "7123022d2d45c449",
+        "type": "tab",
+        "label": "病床管理系統",
+        "disabled": false,
+        "info": "醫院病床管理系統"
+    },
+    {
+        "id": "60958245eccc262b",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "hospital_bed_management",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "patient-dashboard",
+        "type": "ui_tab",
+        "name": "病人管理",
+        "icon": "account_circle",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "status-dashboard",
+        "type": "ui_tab",
+        "name": "病床監控",
+        "icon": "local_hotel",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "help-tab",
+        "type": "ui_tab",
+        "name": "使用說明",
+        "icon": "help_outline",
+        "order": 4
+    },
+    {
+        "id": "2c7ba3be61d4f3de",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-custom",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#a46565",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#a46565",
+                "baseFont": "Arial,Arial,Helvetica,sans-serif",
+                "reset": false
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#4B7930",
+                    "value": "#a46565",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#a46565",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#b18181",
+                    "edited": true
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#a46565",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Arial,Arial,Helvetica,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "病床管理系統",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "bd406ab832ca0dc6",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "64ba3ffbda45c3da",
+        "order": 3,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "d80e0a8f8ed7dd97",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "警報監控",
+        "tab": "status-dashboard",
+        "order": 4,
+        "width": 6
+    },
+    {
+        "id": "f145ec3e985cb364",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "系統說明",
+        "tab": "help-tab",
+        "order": 1,
+        "width": 12
+    },
+    {
+        "id": "63828aae04555cae",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "篩選條件",
+        "tab": "status-dashboard",
+        "order": 1,
+        "width": 6
+    },
+    {
+        "id": "9b187b5333df2af0",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "病床監控",
+        "tab": "status-dashboard",
+        "order": 2,
+        "width": 12
+    },
+    {
+        "id": "c5ad396056edec04",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "病床詳情",
+        "tab": "status-dashboard",
+        "order": 3,
+        "disp": true,
+        "width": 7,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "64ba3ffbda45c3da",
+        "type": "ui_group",
+        "z": "7123022d2d45c449",
+        "name": "病人管理",
+        "tab": "patient-dashboard",
+        "order": 1,
+        "width": "12"
+    },
+    {
+        "id": "663bf54657b2f2d8",
+        "type": "ui_group",
+        "name": "統計儀表板",
+        "tab": "20c00ab13b860ce0",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false
+    },
+    {
+        "id": "20c00ab13b860ce0",
+        "type": "ui_tab",
+        "name": "統計報表",
+        "icon": "assessment",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "1e03c8d5b4ed7de1",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 12,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "61d4be749c8a31ba",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 13,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "0382aee9f8bb9896",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 14,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "05c2dcbefe1e10e8",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 15,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "fc4a6d0b4ae30a0d",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 16,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "5ff2b5fa33bdd59a",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 17,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "52088d9dfce84e40",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 18,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "33b672aefa622bbb",
+        "type": "ui_spacer",
+        "z": "7123022d2d45c449",
+        "name": "spacer",
+        "group": "1259e1fc98dc5fdf",
+        "order": 19,
+        "width": 12,
+        "height": 1
+    },
+    {
+        "id": "199fd9406b4718ed",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "f145ec3e985cb364",
+        "name": "系統使用說明",
+        "order": 1,
+        "width": 12,
+        "height": 20,
+        "format": "<div class=\"system-help\">\n    <h2>醫院病床管理系統使用說明</h2>\n    \n    <div class=\"tabs\">\n        <div class=\"tab\" ng-class=\"{active: activeTab === 'overview'}\" ng-click=\"activeTab = 'overview'\">系統概述</div>\n        <div class=\"tab\" ng-class=\"{active: activeTab === 'monitoring'}\" ng-click=\"activeTab = 'monitoring'\">病床監控</div>\n        <div class=\"tab\" ng-class=\"{active: activeTab === 'patient'}\" ng-click=\"activeTab = 'patient'\">病人管理</div>\n        <div class=\"tab\" ng-class=\"{active: activeTab === 'report'}\" ng-click=\"activeTab = 'report'\">統計報表</div>\n        <div class=\"tab\" ng-class=\"{active: activeTab === 'alert'}\" ng-click=\"activeTab = 'alert'\">警報系統</div>\n    </div>\n    \n    <div class=\"tab-content\" ng-show=\"activeTab === 'overview'\">\n        <h3>系統概述</h3>\n        <p>醫院病床管理系統提供全面的病床與病人管理功能，幫助醫護人員高效管理病床資源。</p>\n        \n        <h4>主要功能</h4>\n        <ul>\n            <li><strong>病床監控：</strong> 即時查看全院病床狀態與使用情況</li>\n            <li><strong>病人管理：</strong> 登記入院病人資料並安排適合的病床</li>\n            <li><strong>病床操作：</strong> 處理出院、轉床、清潔與維修等日常操作</li>\n            <li><strong>數據報表：</strong> 提供病床使用率與病患流動趨勢分析</li>\n            <li><strong>警報監控：</strong> 自動偵測關鍵狀況並發出警報</li>\n        </ul>\n        \n        <h4>病床編號規則</h4>\n        <p>病床編號格式：[科室代碼]-[樓層]-[病房號]-[床號]</p>\n        <p>例如：M-6-012-3 代表內科 6樓 012病房 第3張床</p>\n        \n        <table class=\"bed-code-table\">\n            <tr>\n                <th>科室</th>\n                <th>代碼</th>\n                <th>樓層範圍</th>\n                <th>病房號範圍</th>\n                <th>床號範圍</th>\n            </tr>\n\n            <tr>\n                <td>急診部</td>\n                <td>E</td>\n                <td>1樓</td>\n                <td>001-038</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>重症監護室</td>\n                <td>ICU</td>\n                <td>2樓</td>\n                <td>001-018</td>\n                <td>1（固定單人床）</td>\n            </tr>\n            <tr>\n                <td>婦產科</td>\n                <td>O</td>\n                <td>4樓</td>\n                <td>001-047</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>兒科</td>\n                <td>P</td>\n                <td>5樓</td>\n                <td>001-024</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>內科</td>\n                <td>M</td>\n                <td>6樓</td>\n                <td>001-024</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>外科</td>\n                <td>S</td>\n                <td>7樓</td>\n                <td>001-047</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>神經科</td>\n                <td>N</td>\n                <td>8樓</td>\n                <td>001-047</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>心臟科</td>\n                <td>C</td>\n                <td>9樓</td>\n                <td>001-035</td>\n                <td>1-4</td>\n            </tr>\n            <tr>\n                <td>腫瘤科</td>\n                <td>T</td>\n                <td>10樓</td>\n                <td>001-047</td>\n                <td>1-4</td>\n            </tr>\n        </table>\n    </div>\n    \n    <div class=\"tab-content\" ng-show=\"activeTab === 'monitoring'\">\n        <h3>病床監控使用說明</h3>\n        \n        <h4>病床狀態顏色代碼</h4>\n        <ul class=\"color-legend\">\n            <li><span class=\"color-box available\"></span> <strong>綠色 - 可用：</strong> 病床已清潔並可分配給新病人</li>\n            <li><span class=\"color-box occupied\"></span> <strong>紅色 - 佔用：</strong> 病床目前有病人使用中</li>\n            <li><span class=\"color-box cleaning\"></span> <strong>黃色 - 待清潔：</strong> 病人出院後等待清潔</li>\n            <li><span class=\"color-box maintenance\"></span> <strong>灰色 - 維修：</strong> 病床因設備問題需要維修</li>\n        </ul>\n        \n        <h4>操作指南</h4>\n        <ol>\n            <li>使用上方的<strong>科室</strong>和<strong>樓層</strong>下拉選單篩選病床顯示</li>\n            <li>點擊任一病床卡片查看病床詳細資訊</li>\n            <li>在病床詳情面板中可執行以下操作：\n                <ul>\n                    <li>佔用病床：登記病人出院</li>\n                    <li>待清潔病床：標記完成清潔</li>\n                    <li>任何病床：標記需要維修</li>\n                    <li>維修病床：標記修復完成</li>\n                </ul>\n            </li>\n            <li>使用<strong>刷新</strong>按鈕更新病床狀態顯示</li>\n            <li>右側警報面板會顯示需要注意的床位狀況</li>\n        </ol>\n    </div>\n    \n    <div class=\"tab-content\" ng-show=\"activeTab === 'patient'\">\n        <h3>病人管理使用說明</h3>\n        \n        <h4>病人入院登記</h4>\n        <ol>\n            <li>填寫病人資料表單：\n                <ul>\n                    <li>病歷號（必填）：病人唯一識別號碼</li>\n                    <li>姓名、年齡、性別（必填）</li>\n                    <li>科別：選擇對應的醫療科室</li>\n                    <li>主治醫師：負責照顧該病人的醫師</li>\n                </ul>\n            </li>\n            <li>點擊「登記並安排病床」按鈕提交資料</li>\n            <li>系統會自動搜尋符合病人科別的可用病床</li>\n            <li>從推薦病床清單中選擇合適的病床</li>\n            <li>確認分配後，系統會自動更新病床狀態並記錄入院資訊</li>\n        </ol>\n        \n        <h4>病床操作說明</h4>\n        <ul>\n            <li><strong>病人出院：</strong> 在病床詳情面板點擊「病人出院」按鈕，系統會自動更新病人出院資訊並將病床標記為待清潔</li>\n            <li><strong>病人轉床：</strong> 在病床詳情面板點擊「病人轉床」按鈕開始轉床流程</li>\n        </ul>\n    </div>\n    \n    <div class=\"tab-content\" ng-show=\"activeTab === 'report'\">\n        <h3>統計報表使用說明</h3>\n        \n        <p>統計報表頁面提供病床使用數據與趨勢分析，幫助管理者進行資源規劃。</p>\n        \n        <h4>報表功能</h4>\n        <ul>\n            <li><strong>病床佔用率圖表：</strong> 顯示每日/每週/每月的病床使用率趨勢</li>\n            <li><strong>科室病床分佈：</strong> 顯示各科室病床數量比例</li>\n            <li><strong>病患流動趨勢：</strong> 顯示入院、出院、轉床數據趨勢</li>\n        </ul>\n        \n        <h4>操作指南</h4>\n        <ol>\n            <li>從上方下拉選單選擇時間範圍（每日、每週、每月）</li>\n            <li>點擊「刷新數據」按鈕更新圖表</li>\n            <li>查看底部總體統計資訊，包括平均佔用率、入院人數、出院人數等</li>\n            <li>將滑鼠放在圖表上可查看詳細數據</li>\n        </ol>\n    </div>\n    \n    <div class=\"tab-content\" ng-show=\"activeTab === 'alert'\">\n        <h3>警報系統使用說明</h3>\n        \n        <p>警報系統會自動監控病床使用情況，當發現關鍵問題時發出警報。</p>\n        \n        <h4>警報等級</h4>\n        <ul class=\"alert-legend\">\n            <li><span class=\"alert-indicator high\"></span> <strong>重要警報：</strong> 需要立即處理的緊急情況</li>\n            <li><span class=\"alert-indicator medium\"></span> <strong>中等警報：</strong> 需要注意但非緊急的情況</li>\n            <li><span class=\"alert-indicator low\"></span> <strong>一般提醒：</strong> 作為參考的資訊提醒</li>\n        </ul>\n        \n        <h4>警報觸發條件</h4>\n        <ul>\n            <li>科室病床佔用率超過 90%：觸發<strong>重要警報</strong></li>\n            <li>科室病床佔用率超過 80%：觸發<strong>中等警報</strong></li>\n            <li>急診部可用病床少於 3 張：觸發<strong>重要警報</strong></li>\n            <li>ICU 可用病床少於 2 張：觸發<strong>重要警報</strong></li>\n        </ul>\n        \n    </div>\n</div>\n\n<script>\n(function(scope) {\n    // 初始化顯示的分頁\n    scope.activeTab = 'overview';\n})(scope);\n</script>\n\n<style>\n.system-help {\n    font-family: 'Roboto', sans-serif;\n    color: #333;\n    padding: 20px;\n    max-width: 1200px;\n    margin: 0 auto;\n}\n\nh2 {\n    color: #2196F3;\n    margin-bottom: 20px;\n    border-bottom: 2px solid #eee;\n    padding-bottom: 10px;\n}\n\nh3 {\n    color: #333;\n    margin-top: 0;\n    margin-bottom: 15px;\n}\n\nh4 {\n    color: #555;\n    margin-top: 20px;\n    margin-bottom: 10px;\n}\n\n.tabs {\n    display: flex;\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 20px;\n}\n\n.tab {\n    padding: 10px 20px;\n    cursor: pointer;\n    transition: background-color 0.3s;\n}\n\n.tab:hover {\n    background-color: #f5f5f5;\n}\n\n.tab.active {\n    border-bottom: 3px solid #2196F3;\n    font-weight: bold;\n    color: #2196F3;\n}\n\n.tab-content {\n    line-height: 1.6;\n}\n\n.tab-content p {\n    margin-bottom: 15px;\n}\n\n.tab-content ul, .tab-content ol {\n    padding-left: 25px;\n    margin-bottom: 15px;\n}\n\n.tab-content li {\n    margin-bottom: 8px;\n}\n\n.bed-code-table {\n    width: 100%;\n    border-collapse: collapse;\n    margin: 20px 0;\n}\n\n.bed-code-table th, .bed-code-table td {\n    border: 1px solid #ddd;\n    padding: 8px 12px;\n    text-align: left;\n}\n\n.bed-code-table th {\n    background-color: #f2f2f2;\n}\n\n.bed-code-table tr:nth-child(even) {\n    background-color: #f9f9f9;\n}\n\n.color-legend, .alert-legend {\n    list-style: none;\n    padding: 0;\n    margin: 15px 0;\n}\n\n.color-box {\n    display: inline-block;\n    width: 20px;\n    height: 20px;\n    margin-right: 10px;\n    vertical-align: middle;\n    border-radius: 3px;\n}\n\n.color-box.available {\n    background-color: #4CAF50;\n}\n\n.color-box.occupied {\n    background-color: #F44336;\n}\n\n.color-box.cleaning {\n    background-color: #FFC107;\n}\n\n.color-box.maintenance {\n    background-color: #9E9E9E;\n}\n\n.alert-indicator {\n    display: inline-block;\n    width: 10px;\n    height: 20px;\n    margin-right: 10px;\n    vertical-align: middle;\n    border-radius: 2px;\n}\n\n.alert-indicator.high {\n    background-color: #d9534f;\n    border-left: 4px solid #d9534f;\n}\n\n.alert-indicator.medium {\n    background-color: #f0ad4e;\n    border-left: 4px solid #f0ad4e;\n}\n\n.alert-indicator.low {\n    background-color: #5bc0de;\n    border-left: 4px solid #5bc0de;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 220,
+        "y": 2300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9d9629cf6157737",
+        "type": "comment",
+        "z": "7123022d2d45c449",
+        "name": "病床監控",
+        "info": "此區塊包含病床監控相關功能：\n1. 顯示全院病床使用情況\n2. 依照科室、樓層篩選\n3. 即時更新狀態\n4. 查看床位詳情",
+        "x": 140,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "069627426910e293",
+        "type": "ui_dropdown",
+        "z": "7123022d2d45c449",
+        "name": "科室選擇",
+        "label": "科室",
+        "tooltip": "",
+        "place": "選擇科室",
+        "group": "63828aae04555cae",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "全部科室",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "急診部",
+                "value": "急診部",
+                "type": "str"
+            },
+            {
+                "label": "重症監護室",
+                "value": "重症監護室",
+                "type": "str"
+            },
+            {
+                "label": "婦產科",
+                "value": "婦產科",
+                "type": "str"
+            },
+            {
+                "label": "兒科",
+                "value": "兒科",
+                "type": "str"
+            },
+            {
+                "label": "內科",
+                "value": "內科",
+                "type": "str"
+            },
+            {
+                "label": "外科",
+                "value": "外科",
+                "type": "str"
+            },
+            {
+                "label": "神經科",
+                "value": "神經科",
+                "type": "str"
+            },
+            {
+                "label": "心臟科",
+                "value": "心臟科",
+                "type": "str"
+            },
+            {
+                "label": "腫瘤科",
+                "value": "腫瘤科",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "department",
+        "topicType": "str",
+        "className": "",
+        "x": 1160,
+        "y": 480,
+        "wires": [
+            [
+                "9156587ba2ffdef0"
+            ]
+        ]
+    },
+    {
+        "id": "a12283d75338f940",
+        "type": "ui_dropdown",
+        "z": "7123022d2d45c449",
+        "name": "狀態選擇",
+        "label": "床位狀態",
+        "tooltip": "",
+        "place": "選擇狀態",
+        "group": "63828aae04555cae",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "全部狀態",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "可用",
+                "value": "available",
+                "type": "str"
+            },
+            {
+                "label": "佔用",
+                "value": "occupied",
+                "type": "str"
+            },
+            {
+                "label": "清潔中",
+                "value": "cleaning",
+                "type": "str"
+            },
+            {
+                "label": "維修中",
+                "value": "maintenance",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "status",
+        "topicType": "str",
+        "className": "",
+        "x": 1160,
+        "y": 540,
+        "wires": [
+            [
+                "9156587ba2ffdef0"
+            ]
+        ]
+    },
+    {
+        "id": "9156587ba2ffdef0",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "組合篩選條件",
+        "func": "// 初始化 flow context 或從中獲取現有值\nconst filters = flow.get('filters') || {\n    department: null,\n    status: null\n};\n\n// 根據消息主題更新對應的篩選條件\nif (msg.topic === 'department') {\n    filters.department = msg.payload || null;\n} else if (msg.topic === 'status') {\n    filters.status = msg.payload || null;\n}\n\n// 存儲更新後的篩選條件\nflow.set('filters', filters);\n\n// 設置消息負載為當前篩選條件\nmsg.payload = filters;\n\n// 只傳送到顯示節點，不觸發查詢\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// 初始化篩選條件\nflow.set('filters', {\n    department: null,\n    status: null\n});",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 520,
+        "wires": [
+            [
+                "a4e0226fc668a1d6"
+            ]
+        ]
+    },
+    {
+        "id": "b99e6d61f5f8e75e",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "應用篩選",
+        "group": "63828aae04555cae",
+        "order": 4,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "應用篩選",
+        "tooltip": "點擊應用已選擇的篩選條件",
+        "color": "",
+        "bgcolor": "#4CAF50",
+        "className": "",
+        "icon": "filter_list",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "apply_filter",
+        "topicType": "str",
+        "x": 680,
+        "y": 340,
+        "wires": [
+            [
+                "9fa4a162478ce350"
+            ]
+        ]
+    },
+    {
+        "id": "9fa4a162478ce350",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "獲取當前篩選條件",
+        "func": "// 從 flow context 中獲取當前篩選條件\nconst filters = flow.get('filters') || {\n    department: null,\n    status: null\n};\n\n// 輸出當前過濾條件到日誌\nnode.warn(`應用篩選條件: ${JSON.stringify(filters)}`);\n\n// 將篩選條件設置為消息負載\nmsg.payload = filters;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 380,
+        "wires": [
+            [
+                "5f571d163f255c65"
+            ]
+        ]
+    },
+    {
+        "id": "5f571d163f255c65",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "構建查詢",
+        "func": "// 從消息負載中獲取篩選條件\nconst filters = msg.payload;\nconst department = filters.department;\nconst status = filters.status;\n\n// 根據資料庫結構調整狀態值的映射\nlet statusValue = null;\nif (status) {\n    switch (status) {\n        case 'available':\n            statusValue = '可用';\n            break;\n        case 'occupied':\n            statusValue = '佔用';\n            break;\n        case 'cleaning':\n            statusValue = '待清潔';\n            break;\n        case 'maintenance':\n            statusValue = '維修';\n            break;\n    }\n}\n\n// 構建基本查詢語句\nlet query = `\nSELECT b.*, p.name as patient_name, p.id_number, p.age, p.gender \nFROM beds b \nLEFT JOIN patients p ON b.patient_id = p.patient_id\n`;\n\n// 添加篩選條件\nlet conditions = [];\nif (department) {\n    conditions.push(`b.department = '${department}'`);\n}\nif (statusValue) {\n    conditions.push(`b.status = '${statusValue}'`);\n}\n\n// 如果有篩選條件，添加 WHERE 子句\nif (conditions.length > 0) {\n    query += ` WHERE ${conditions.join(' AND ')}`;\n}\n\n// 添加排序\nquery += ` ORDER BY b.department, b.floor, b.room_number, b.bed_number`;\n\n// 添加限制，避免返回過多數據\nquery += ` LIMIT 1000`;\n\n// 設置為消息主題（用於 MySQL 節點）\nmsg.topic = query;\n\n// 記錄查詢語句\nnode.warn(`執行查詢: ${query}`);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 440,
+        "wires": [
+            [
+                "b7846aba3005e619"
+            ]
+        ]
+    },
+    {
+        "id": "b7846aba3005e619",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "執行資料庫查詢",
+        "x": 960,
+        "y": 440,
+        "wires": [
+            [
+                "e09ce0a14c6d0e4c"
+            ]
+        ]
+    },
+    {
+        "id": "e09ce0a14c6d0e4c",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "格式化病床資料",
+        "func": "try {\n    // 獲取查詢結果\n    const beds = msg.payload || [];\n    \n    // 記錄接收到的數據量\n    node.warn(`收到 ${beds.length} 筆病床資料`);\n    \n    // 初始化統計數據\n    const stats = {\n        available: 0,\n        occupied: 0,\n        cleaning: 0,\n        maintenance: 0\n    };\n    \n    // 初始化分組數據\n    const groupedBeds = {};\n    \n    // 處理每一筆病床數據\n    beds.forEach(bed => {\n        // 建立位置標識（樓層+科室）\n        const location = `${bed.floor}樓 ${bed.department}`;\n        \n        // 如果此位置尚未初始化，則建立\n        if (!groupedBeds[location]) {\n            groupedBeds[location] = [];\n        }\n        \n        // 根據狀態設置顏色和圖標\n        let color, icon, statusText, statusCode;\n        \n        // 根據資料庫的中文狀態值映射到英文代碼和顯示文字\n        switch(bed.status) {\n            case '可用':\n                statusCode = 'available';\n                statusText = '可用';\n                color = '#4CAF50';\n                icon = 'check_circle';\n                stats.available++;\n                break;\n            case '佔用':\n                statusCode = 'occupied';\n                statusText = '佔用';\n                color = '#F44336';\n                icon = 'person';\n                stats.occupied++;\n                break;\n            case '待清潔':\n                statusCode = 'cleaning';\n                statusText = '待清潔';\n                color = '#FFC107';\n                icon = 'cleaning_services';\n                stats.cleaning++;\n                break;\n            case '維修':\n                statusCode = 'maintenance';\n                statusText = '維修中';\n                color = '#9E9E9E';\n                icon = 'build';\n                stats.maintenance++;\n                break;\n            default:\n                statusCode = 'unknown';\n                statusText = '未知';\n                color = '#2196F3';\n                icon = 'help';\n        }\n        \n        // 格式化病床資料\n        const formattedBed = {\n            id: bed.bed_id,\n            code: bed.bed_code || `${bed.room_number}-${bed.bed_number}`,\n            patientName: bed.patient_name || '空床',\n            medicalRecordNumber: bed.medical_record_number,\n            status: statusText,\n            statusCode: statusCode,\n            color: color,\n            icon: icon,\n            department: bed.department,\n            floor: bed.floor\n        };\n        \n        // 添加到對應的位置組\n        groupedBeds[location].push(formattedBed);\n    });\n    \n    // 構建最終輸出\n    msg.payload = {\n        stats: stats,\n        groupedBeds: groupedBeds\n    };\n    \n    // 記錄完成的分組數\n    node.warn(`格式化完成，共 ${Object.keys(groupedBeds).length} 個位置分組`);\n    \n    return msg;\n} catch (error) {\n    // 錯誤處理\n    node.error(`處理病床資料時發生錯誤: ${error.message}`);\n    \n    // 返回空資料\n    msg.payload = {\n        stats: { available: 0, occupied: 0, cleaning: 0, maintenance: 0 },\n        groupedBeds: {},\n        error: true,\n        message: `處理資料時發生錯誤: ${error.message}`\n    };\n    \n    return msg;\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 440,
+        "wires": [
+            [
+                "878a4026ada885cb"
+            ]
+        ]
+    },
+    {
+        "id": "8db835cd2bdbbfd6",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "清除篩選",
+        "group": "63828aae04555cae",
+        "order": 5,
+        "width": 3,
+        "height": 1,
+        "passthru": false,
+        "label": "清除篩選",
+        "tooltip": "清除所有篩選條件",
+        "color": "",
+        "bgcolor": "#F44336",
+        "icon": "clear",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "clear_filter",
+        "topicType": "str",
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "e88418ebb47b8651"
+            ]
+        ]
+    },
+    {
+        "id": "e88418ebb47b8651",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "重置篩選條件",
+        "func": "// 重置篩選條件\nflow.set('filters', {\n    department: null,\n    status: null\n});\n\n// 記錄操作\nnode.warn('已重置所有篩選條件');\n\n// 創建重置消息\nmsg.payload = {\n    department: null,\n    status: null\n};\n\n// 返回消息\nreturn [msg, msg];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 500,
+        "wires": [
+            [
+                "5f571d163f255c65"
+            ],
+            [
+                "39342d79412aa5a0"
+            ]
+        ]
+    },
+    {
+        "id": "39342d79412aa5a0",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "重置下拉選單",
+        "func": "// 創建重置消息\nconst resetMsg = { payload: \"\" };\n\n// 更新當前篩選條件顯示\nconst filterMsg = {\n    payload: {\n        department: null,\n        status: null\n    }\n};\n\nreturn [resetMsg, resetMsg, filterMsg];",
+        "outputs": 3,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 940,
+        "y": 520,
+        "wires": [
+            [
+                "069627426910e293"
+            ],
+            [
+                "a12283d75338f940"
+            ],
+            [
+                "a4e0226fc668a1d6"
+            ]
+        ]
+    },
+    {
+        "id": "ca9abb1d17453c04",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "刷新資料",
+        "group": "63828aae04555cae",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "刷新資料",
+        "tooltip": "重新載入病床資料",
+        "color": "",
+        "bgcolor": "#2196F3",
+        "className": "",
+        "icon": "refresh",
+        "payload": "{}",
+        "payloadType": "json",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 680,
+        "y": 300,
+        "wires": [
+            [
+                "9fa4a162478ce350"
+            ]
+        ]
+    },
+    {
+        "id": "042890aa80a8e2e5",
+        "type": "inject",
+        "z": "7123022d2d45c449",
+        "name": "系統啟動觸發器",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.5,
+        "topic": "system_startup",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 260,
+        "y": 380,
+        "wires": [
+            [
+                "1921cdc40af35af3"
+            ]
+        ]
+    },
+    {
+        "id": "1921cdc40af35af3",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "系統啟動處理",
+        "func": "// 建立啟動通知訊息\nconst notifyMsg = {\n    topic: \"system_startup\",\n    payload: {\n        title: \"病床管理系統已啟動\",\n        message: \"系統已成功啟動並準備就緒\"\n    }\n};\n\n// 建立載入資料訊息\nconst loadMsg = {\n    topic: \"load_data\",\n    payload: {}\n};\n\n// 返回通知和載入訊息\nreturn [notifyMsg, loadMsg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "c86f6c55aac9faac"
+            ],
+            [
+                "9fa4a162478ce350"
+            ]
+        ]
+    },
+    {
+        "id": "c86f6c55aac9faac",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "格式化通知",
+        "func": "// 提取標題和消息\nif (msg.payload && msg.payload.title && msg.payload.message) {\n    msg.topic = msg.payload.title;\n    msg.payload = msg.payload.message;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 240,
+        "wires": [
+            [
+                "6127bc156b8d3804"
+            ]
+        ]
+    },
+    {
+        "id": "6127bc156b8d3804",
+        "type": "ui_toast",
+        "z": "7123022d2d45c449",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "success",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "啟動通知",
+        "x": 860,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "a4e0226fc668a1d6",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "63828aae04555cae",
+        "name": "當前篩選條件顯示",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<div class=\"current-filter-display\">\n    <span class=\"filter-label\">當前篩選: </span>\n    <span class=\"filter-value\" ng-if=\"msg.payload.department\">科室: {{getDepartmentLabel(msg.payload.department)}}</span>\n    <span class=\"filter-value\" ng-if=\"msg.payload.status\">狀態: {{getStatusLabel(msg.payload.status)}}</span>\n    <span class=\"filter-value\" ng-if=\"!msg.payload.department && !msg.payload.status\">無篩選條件</span>\n</div>\n\n<script>\n// 獲取科室標籤\nscope.getDepartmentLabel = function(value) {\n    const deptMap = {\n        '急診部': '急診部',\n        '重症監護室': '重症監護室',\n        '婦產科': '婦產科',\n        '兒科': '兒科',\n        '內科': '內科',\n        '外科': '外科',\n        '神經科': '神經科',\n        '心臟科': '心臟科',\n        '腫瘤科': '腫瘤科'\n    };\n    return deptMap[value] || value;\n};\n\n// 獲取狀態標籤\nscope.getStatusLabel = function(value) {\n    const statusMap = {\n        'available': '可用',\n        'occupied': '佔用',\n        'cleaning': '清潔中',\n        'maintenance': '維修中'\n    };\n    return statusMap[value] || value;\n};\n</script>\n\n<style>\n.current-filter-display {\n    padding: 5px 10px;\n    background-color: #f5f5f5;\n    border-radius: 4px;\n    font-size: 14px;\n}\n\n.filter-label {\n    font-weight: bold;\n    color: #555;\n}\n\n.filter-value {\n    margin-left: 10px;\n    padding: 3px 8px;\n    background-color: #e0e0e0;\n    border-radius: 12px;\n    display: inline-block;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1270,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "878a4026ada885cb",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "9b187b5333df2af0",
+        "name": "病床監控面板",
+        "order": 1,
+        "width": 12,
+        "height": 15,
+        "format": "<div class=\"bed-dashboard\">\n    <div class=\"status-summary\">\n        <div class=\"stat-box available\">\n            <span class=\"stat-count\">{{msg.payload.stats.available}}</span>\n            <span class=\"stat-label\">可用</span>\n        </div>\n        <div class=\"stat-box occupied\">\n            <span class=\"stat-count\">{{msg.payload.stats.occupied}}</span>\n            <span class=\"stat-label\">佔用</span>\n        </div>\n        <div class=\"stat-box cleaning\">\n            <span class=\"stat-count\">{{msg.payload.stats.cleaning}}</span>\n            <span class=\"stat-label\">待清潔</span>\n        </div>\n        <div class=\"stat-box maintenance\">\n            <span class=\"stat-count\">{{msg.payload.stats.maintenance}}</span>\n            <span class=\"stat-label\">維修</span>\n        </div>\n    </div>\n\n    <div class=\"no-data-message\" ng-if=\"!msg.payload.groupedBeds || Object.keys(msg.payload.groupedBeds).length === 0\">\n        找不到符合條件的病床數據\n    </div>\n\n    <div class=\"bed-container\" ng-repeat=\"(location, beds) in msg.payload.groupedBeds\">\n        <h3 class=\"location-title\">{{location}}</h3>\n        <div class=\"bed-grid\">\n            <div class=\"bed-card\" \n                 ng-repeat=\"bed in beds\" \n                 ng-style=\"{'border-color': bed.color}\"\n                 ng-click=\"send({payload: {action: 'select-bed', bedId: bed.id}})\">\n                <div class=\"bed-header\" ng-style=\"{'background-color': bed.color}\">\n                    <md-icon>{{bed.icon}}</md-icon>\n                    <span class=\"bed-code\">{{bed.code}}</span>\n                </div>\n                <div class=\"bed-info\">\n                    <div class=\"patient-name\" ng-class=\"{'empty-bed': bed.patientName === '空床'}\">{{bed.patientName}}</div>\n                    <div class=\"status-label\">{{bed.status}}</div>\n                    <div class=\"medical-record\" ng-if=\"bed.medicalRecordNumber\">{{bed.medicalRecordNumber}}</div>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>\n\n<style>\n.bed-dashboard {\n    font-family: 'Roboto', sans-serif;\n}\n\n.status-summary {\n    display: flex;\n    margin-bottom: 20px;\n    justify-content: space-between;\n}\n\n.stat-box {\n    padding: 10px 20px;\n    border-radius: 5px;\n    text-align: center;\n    width: 22%;\n    color: white;\n}\n\n.stat-count {\n    font-size: 24px;\n    font-weight: bold;\n    display: block;\n}\n\n.stat-label {\n    font-size: 14px;\n}\n\n.available {\n    background-color: #4CAF50;\n}\n\n.occupied {\n    background-color: #F44336;\n}\n\n.cleaning {\n    background-color: #FFC107;\n    color: black;\n}\n\n.maintenance {\n    background-color: #9E9E9E;\n}\n\n.no-data-message {\n    padding: 20px;\n    text-align: center;\n    background-color: #f5f5f5;\n    border-radius: 5px;\n    margin-bottom: 20px;\n    color: #757575;\n    font-size: 16px;\n}\n\n.location-title {\n    font-size: 18px;\n    margin-top: 20px;\n    margin-bottom: 10px;\n    padding-bottom: 5px;\n    border-bottom: 1px solid #eee;\n}\n\n.bed-grid {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 15px;\n}\n\n.bed-card {\n    width: 150px;\n    height: 120px;\n    border-radius: 5px;\n    border: 2px solid;\n    overflow: hidden;\n    box-shadow: 0 2px 5px rgba(0,0,0,0.1);\n    transition: transform 0.2s;\n    cursor: pointer;\n}\n\n.bed-card:hover {\n    transform: translateY(-2px);\n    box-shadow: 0 4px 8px rgba(0,0,0,0.2);\n}\n\n.bed-header {\n    padding: 5px;\n    color: white;\n    display: flex;\n    align-items: center;\n}\n\n.bed-code {\n    margin-left: 5px;\n    font-weight: bold;\n}\n\n.bed-info {\n    padding: 10px;\n}\n\n.patient-name {\n    font-weight: bold;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    margin-bottom: 5px;\n}\n\n.empty-bed {\n    color: #9E9E9E;\n    font-style: italic;\n}\n\n.status-label {\n    font-size: 12px;\n    color: #757575;\n}\n\n.medical-record {\n    font-size: 12px;\n    color: #757575;\n    margin-top: 5px;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1320,
+        "y": 440,
+        "wires": [
+            [
+                "a307ef7d66026c6a"
+            ]
+        ]
+    },
+    {
+        "id": "a307ef7d66026c6a",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理病床詳情請求",
+        "func": "// 只處理病床選擇動作\nif (msg.payload && msg.payload.action === 'select-bed') {\n    // 獲取被選中的病床ID\n    const bedId = msg.payload.bedId;\n\n    // 建立查詢請求，確保明確包含 id_number 欄位\n    msg.topic = `\n    SELECT \n        b.*, \n        p.name as patient_name, \n        p.id_number,\n        p.age,\n        p.gender,\n        p.department as patient_department,\n        p.doctor,\n        p.registration_date\n    FROM beds b \n    LEFT JOIN patients p ON b.patient_id = p.patient_id\n    WHERE b.bed_id = ${bedId}\n    `;\n\n    node.warn(`查詢病床詳情: ${bedId}, SQL: ${msg.topic}`);\n    return msg;\n}\n\n// 其他請求不處理\nreturn null;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1510,
+        "y": 440,
+        "wires": [
+            [
+                "8916cd6da1729479"
+            ]
+        ]
+    },
+    {
+        "id": "8916cd6da1729479",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢病床詳情",
+        "x": 1720,
+        "y": 440,
+        "wires": [
+            [
+                "441eb27d381522c1"
+            ]
+        ]
+    },
+    {
+        "id": "441eb27d381522c1",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "格式化病床詳情",
+        "func": "// 取得查詢結果\nconst result = msg.payload;\n\n// 記錄原始查詢結果（診斷用）\nnode.warn(`病床詳情查詢結果: ${JSON.stringify(result, null, 2)}`);\n\n// 確保有查詢結果\nif (result && result.length > 0) {\n    const bedDetail = result[0];\n\n    // 記錄 id_number 欄位（診斷用）\n    node.warn(`病人 id_number: ${bedDetail.id_number}`);\n\n    // 格式化病人資料\n    let patientInfo = null;\n    if (bedDetail.patient_id) {\n        // 直接使用資料庫中的年齡欄位\n        const age = bedDetail.age || '未知';\n\n        // 計算住院天數\n        let daysInHospital = '';\n        if (bedDetail.admission_date) {\n            const admissionDate = new Date(String(bedDetail.admission_date)); // 確保轉為字串\n            const today = new Date();\n            const diffTime = Math.abs(today.getTime() - admissionDate.getTime());\n            daysInHospital = Math.ceil(diffTime / (1000 * 60 * 60 * 24));\n        }\n\n        // 建立病人資訊物件，確保包含 id_number\n        patientInfo = {\n            name: bedDetail.patient_name,\n            id_number: bedDetail.id_number, // 明確指定 id_number\n            gender: bedDetail.gender || '未知',\n            age: age,\n            admissionDate: bedDetail.admission_date ? new Date(bedDetail.admission_date).toLocaleDateString() : '未知',\n            dischargeDate: bedDetail.discharge_date ? new Date(bedDetail.discharge_date).toLocaleDateString() : '尚未出院',\n            daysInHospital: daysInHospital || '未知',\n            department: bedDetail.patient_department || bedDetail.department,\n            doctor: bedDetail.doctor || '未指派'\n        };\n    }\n\n    // 根據資料庫的中文狀態值映射到英文代碼和顯示文字\n    let statusText, statusColor, statusCode;\n    switch (bedDetail.status) {\n        case '可用':\n            statusText = '可用';\n            statusColor = '#4CAF50';\n            statusCode = 'available';\n            break;\n        case '佔用':\n            statusText = '佔用';\n            statusColor = '#F44336';\n            statusCode = 'occupied';\n            break;\n        case '待清潔':\n            statusText = '待清潔';\n            statusColor = '#FFC107';\n            statusCode = 'cleaning';\n            break;\n        case '維修':\n            statusText = '維修中';\n            statusColor = '#9E9E9E';\n            statusCode = 'maintenance';\n            break;\n        default:\n            statusText = '未知';\n            statusColor = '#2196F3';\n            statusCode = 'unknown';\n    }\n\n    // 格式化輸出\n    msg.payload = {\n        bed: {\n            id: bedDetail.bed_id,\n            code: bedDetail.bed_code || `${bedDetail.room_number}-${bedDetail.bed_number}`,\n            floor: bedDetail.floor,\n            department: bedDetail.department,\n            status: statusText,\n            statusCode: statusCode,\n            statusColor: statusColor,\n            roomNumber: bedDetail.room_number,\n            bedNumber: bedDetail.bed_number,\n            lastCleaned: bedDetail.last_cleaned ? new Date(bedDetail.last_cleaned).toLocaleString() : '未知'\n        },\n        patient: patientInfo\n    };\n\n\n    // 發送到詳情對話框\n    return msg;\n}\n\n// 沒有查詢結果\nmsg.payload = {\n    error: true,\n    message: '未找到病床資料'\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1900,
+        "y": 440,
+        "wires": [
+            [
+                "eb419ebfb9e57861"
+            ]
+        ]
+    },
+    {
+        "id": "eb419ebfb9e57861",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "c5ad396056edec04",
+        "name": "病床詳情對話框",
+        "order": 1,
+        "width": 7,
+        "height": 18,
+        "format": "<div class=\"bed-detail-dialog\" ng-if=\"msg.payload && !msg.payload.error\">\n    <div class=\"bed-detail-header\" ng-style=\"{'background-color': msg.payload.bed.statusColor}\">\n        <h2 class=\"bed-title\">{{msg.payload.bed.code}} 詳細資料</h2>\n        <span class=\"bed-status\">{{msg.payload.bed.status}}</span>\n    </div>\n\n    <div class=\"detail-container\">\n        </div>\n\n        <div class=\"detail-section\">\n            <h3>病床資訊</h3>\n            <div class=\"detail-grid\">\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">科室:</span>\n                    <span class=\"detail-value\">{{msg.payload.bed.department}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">樓層:</span>\n                    <span class=\"detail-value\">{{msg.payload.bed.floor}}樓</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">房間號:</span>\n                    <span class=\"detail-value\">{{msg.payload.bed.roomNumber}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">床號:</span>\n                    <span class=\"detail-value\">{{msg.payload.bed.bedNumber}}</span>\n                </div>\n                <div class=\"detail-item full-width\">\n                    <span class=\"detail-label\">最近清潔時間:</span>\n                    <span class=\"detail-value\">{{msg.payload.bed.lastCleaned}}</span>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"detail-section\" ng-if=\"msg.payload.patient\">\n            <h3>病人資訊</h3>\n            <div class=\"detail-grid\">\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">姓名:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.name}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">病歷號:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.id_number}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">性別:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.gender}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">年齡:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.age}}歲</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">科室:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.department}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">主治醫師:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.doctor}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">入院日期:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.admissionDate}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">出院日期:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.dischargeDate}}</span>\n                </div>\n                <div class=\"detail-item\">\n                    <span class=\"detail-label\">住院天數:</span>\n                    <span class=\"detail-value\">{{msg.payload.patient.daysInHospital}}天</span>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"detail-section\" ng-if=\"!msg.payload.patient\">\n            <div class=\"empty-patient-message\">\n                此病床目前無病人\n            </div>\n        </div>\n\n        <div class=\"detail-actions\">\n            <!-- 1. 可用狀態按鈕 -->\n            <div ng-if=\"msg.payload.bed.statusCode === 'available'\">\n                <button class=\"action-button maintenance-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'maintenance'}})\">\n                    維修\n                </button>\n                <button class=\"action-button close-button\" ng-click=\"send({payload: {action: 'close-detail'}})\">\n                    關閉\n                </button>\n            </div>\n\n            <!-- 2. 佔用狀態按鈕 -->\n            <div ng-if=\"msg.payload.bed.statusCode === 'occupied'\">\n                <button class=\"action-button discharge-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'cleaning'}})\">\n                    出院\n                </button>\n                <button class=\"action-button maintenance-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'maintenance'}})\">\n                    維修\n                </button>\n                <button class=\"action-button close-button\" ng-click=\"send({payload: {action: 'close-detail'}})\">\n                    關閉\n                </button>\n            </div>\n\n            <!-- 3. 待清潔狀態按鈕 -->\n            <div ng-if=\"msg.payload.bed.statusCode === 'cleaning'\">\n                <button class=\"action-button cleaning-done-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'available'}})\">\n                    打掃完畢\n                </button>\n                <button class=\"action-button maintenance-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'maintenance'}})\">\n                    維修\n                </button>\n                <button class=\"action-button close-button\" ng-click=\"send({payload: {action: 'close-detail'}})\">\n                    關閉\n                </button>\n            </div>\n\n            <!-- 4. 維修狀態按鈕 -->\n            <div ng-if=\"msg.payload.bed.statusCode === 'maintenance'\">\n                <button class=\"action-button maintenance-done-button\" ng-click=\"send({payload: {action: 'change-status', bedId: msg.payload.bed.id, newStatus: 'available'}})\">\n                    已維修\n                </button>\n                <button class=\"action-button close-button\" ng-click=\"send({payload: {action: 'close-detail'}})\">\n                    關閉\n                </button>\n            </div>\n        </div>\n    </div>\n</div>\n\n<div class=\"error-message\" ng-if=\"msg.payload && msg.payload.error\">\n    <h3>{{msg.payload.message}}</h3>\n    <button class=\"action-button close-button\" ng-click=\"send({payload: {action: 'close-detail'}})\">\n        關閉\n    </button>\n</div>\n\n<script>\n    // 用於調試的輔助函數\nscope.getObjectKeys = function(obj) {\n    if (!obj) return [];\n    return Object.keys(obj);\n};\n</script>\n\n<style>\n    .bed-detail-dialog {\n        font-family: 'Roboto', sans-serif;\n        background-color: white;\n        border-radius: 8px;\n        overflow: hidden;\n        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);\n    }\n\n    .bed-detail-header {\n        padding: 15px 20px;\n        color: white;\n        display: flex;\n        justify-content: space-between;\n        align-items: center;\n    }\n\n    .bed-title {\n        margin: 0;\n        font-size: 20px;\n        font-weight: 500;\n        background-color: inherit;\n    }\n\n    .bed-status {\n        font-size: 16px;\n        font-weight: 500;\n        padding: 5px 10px;\n        background-color: rgba(255, 255, 255, 0.2);\n        border-radius: 12px;\n    }\n\n    .detail-container {\n        padding: 20px;\n    }\n\n    .detail-section {\n        margin-bottom: 25px;\n    }\n\n    .detail-section h3 {\n        font-size: 18px;\n        margin-top: 0;\n        margin-bottom: 15px;\n        padding-bottom: 5px;\n        border-bottom: 1px solid #eee;\n        color: #333;\n    }\n\n    .detail-grid {\n        display: grid;\n        grid-template-columns: 1fr 1fr;\n        gap: 15px;\n    }\n\n    .detail-item {\n        display: flex;\n        flex-direction: column;\n    }\n\n    .detail-item.full-width {\n        grid-column: 1 / span 2;\n    }\n\n    .detail-label {\n        font-size: 12px;\n        color: #757575;\n        margin-bottom: 3px;\n    }\n\n    .detail-value {\n        font-size: 16px;\n        color: #333;\n    }\n\n    .empty-patient-message {\n        padding: 20px;\n        text-align: center;\n        background-color: #f5f5f5;\n        border-radius: 5px;\n        color: #757575;\n        font-size: 16px;\n    }\n\n    .detail-actions {\n        display: flex;\n        justify-content: flex-end;\n        margin-top: 20px;\n        gap: 10px;\n    }\n\n    .action-button {\n        padding: 8px 15px;\n        border: none;\n        border-radius: 4px;\n        cursor: pointer;\n        font-size: 14px;\n        font-weight: 500;\n        transition: background-color 0.3s;\n        margin-left: 8px;\n    }\n\n    .close-button {\n        background-color: #9e9e9e;\n        color: white;\n    }\n\n    .close-button:hover {\n        background-color: #757575;\n    }\n\n    .maintenance-button {\n        background-color: #ff9800;\n        color: white;\n    }\n\n    .maintenance-button:hover {\n        background-color: #f57c00;\n    }\n\n    .discharge-button {\n        background-color: #2196F3;\n        color: white;\n    }\n\n    .discharge-button:hover {\n        background-color: #1976D2;\n    }\n\n    .cleaning-done-button {\n        background-color: #4CAF50;\n        color: white;\n    }\n\n    .cleaning-done-button:hover {\n        background-color: #388E3C;\n    }\n\n    .maintenance-done-button {\n        background-color: #4CAF50;\n        color: white;\n    }\n\n    .maintenance-done-button:hover {\n        background-color: #388E3C;\n    }\n\n    .error-message {\n        padding: 30px 20px;\n        text-align: center;\n        background-color: #ffebee;\n        border-radius: 8px;\n        color: #d32f2f;\n    }\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1920,
+        "y": 500,
+        "wires": [
+            [
+                "a67081fa0526d0b8"
+            ]
+        ]
+    },
+    {
+        "id": "cf93e403300bcd5b",
+        "type": "ui_dropdown",
+        "z": "7123022d2d45c449",
+        "name": "選擇科別與醫師",
+        "label": "請選擇科別與醫師",
+        "tooltip": "",
+        "place": "選擇科別與醫師",
+        "group": "64ba3ffbda45c3da",
+        "order": 4,
+        "width": 12,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "請選擇科別與醫師",
+                "value": "",
+                "type": "str"
+            },
+            {
+                "label": "急診部 - 陳緊急醫師",
+                "value": "急診部|陳緊急",
+                "type": "str"
+            },
+            {
+                "label": "重症監護室 - 黃重醫師",
+                "value": "重症監護室|黃重",
+                "type": "str"
+            },
+            {
+                "label": "婦產科 - 吳佩珊醫師",
+                "value": "婦產科|吳佩珊",
+                "type": "str"
+            },
+            {
+                "label": "兒科 - 林美玲醫師",
+                "value": "兒科|林美玲",
+                "type": "str"
+            },
+            {
+                "label": "內科 - 王大明醫師",
+                "value": "內科|王大明",
+                "type": "str"
+            },
+            {
+                "label": "外科 - 張志豪醫師",
+                "value": "外科|張志豪",
+                "type": "str"
+            },
+            {
+                "label": "神經科 - 劉建宏醫師",
+                "value": "神經科|劉建宏",
+                "type": "str"
+            },
+            {
+                "label": "心臟科 - 楊家豪醫師",
+                "value": "心臟科|楊家豪",
+                "type": "str"
+            },
+            {
+                "label": "腫瘤科 - 郭明德醫師",
+                "value": "腫瘤科|郭明德",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "doctor_department",
+        "topicType": "str",
+        "className": "",
+        "x": 440,
+        "y": 1300,
+        "wires": [
+            [
+                "74cc216777fb2cd5"
+            ]
+        ]
+    },
+    {
+        "id": "74cc216777fb2cd5",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理科別與醫師選擇",
+        "func": "// 獲取選擇的值\nconst selection = msg.payload || \"\";\n\n// 如果是空值，不處理\nif (!selection) {\n    return null;\n}\n\n// 分解科別和醫師名稱 (格式是: \"科別|醫師名\")\nconst [department, doctor] = selection.split('|');\n\n// 獲取現有的病患資料\nconst patientData = flow.get('patientData') || {};\n\n// 更新科別和醫師資訊\npatientData.department = department;\npatientData.doctor = doctor;\n\n// 儲存更新後的資料\nflow.set('patientData', patientData);\n\n// 記錄選擇\nnode.warn(`選擇科別: ${department}, 醫師: ${doctor}`);\nnode.warn(`更新後的病患資料: ${JSON.stringify(patientData)}`);\n\n// 返回訊息以繼續流程\nmsg.payload = patientData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1300,
+        "wires": [
+            [
+                "ce46746d610250d9"
+            ]
+        ]
+    },
+    {
+        "id": "ce46746d610250d9",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "確認登記按鈕",
+        "group": "64ba3ffbda45c3da",
+        "order": 5,
+        "width": 12,
+        "height": 1,
+        "passthru": false,
+        "label": "確認登記",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#4CAF50",
+        "className": "",
+        "icon": "check_circle",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "confirm_registration",
+        "topicType": "str",
+        "x": 840,
+        "y": 1300,
+        "wires": [
+            [
+                "73bc655aa6ef83d0"
+            ]
+        ]
+    },
+    {
+        "id": "73bc655aa6ef83d0",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備病患資料",
+        "func": "// 獲取所有患者資料\nconst patientData = flow.get('patientData') || {};\n\n// 記錄當前資料狀態\nnode.warn(`準備登記的病患資料: ${JSON.stringify(patientData)}`);\n\n// 檢查是否有必要的資料\nif (!patientData.id_number || !patientData.name || \n    !patientData.age || !patientData.gender || \n    !patientData.department || !patientData.doctor) {\n    \n    // 記錄缺少的欄位\n    const missing = [];\n    if (!patientData.id_number) missing.push(\"身分證字號\");\n    if (!patientData.name) missing.push(\"姓名\");\n    if (!patientData.age) missing.push(\"年齡\");\n    if (!patientData.gender) missing.push(\"性別\");\n    if (!patientData.department) missing.push(\"科別\");\n    if (!patientData.doctor) missing.push(\"醫師\");\n    \n    // 資料不完整\n    const errorMessage = `請填寫所有必要資料，缺少: ${missing.join(\", \")}`;\n    node.warn(`登記失敗: ${errorMessage}`);\n    \n    msg.topic = \"登記失敗\";\n    msg.payload = errorMessage;\n    msg.highlight = \"error\";\n    return [null, msg];\n}\n\n// 設置查詢語句來尋找合適的床位\nmsg.topic = `\nSELECT bed_id, department, floor, room_number, bed_number\nFROM beds\nWHERE status = '可用' AND department = '${patientData.department}'\nORDER BY RAND()\nLIMIT 1;\n`;\n\n// 儲存患者資料以便後續使用\nflow.set('tempPatientData', patientData);\n\n// 返回查詢訊息\nreturn [msg, null];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1020,
+        "y": 1300,
+        "wires": [
+            [
+                "8f02161b14c6c863"
+            ],
+            [
+                "22de4f11de0a8060"
+            ]
+        ]
+    },
+    {
+        "id": "b318a01af3cda3bf",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "保存病患到資料庫",
+        "x": 1630,
+        "y": 1200,
+        "wires": [
+            [
+                "ed6ef2919ba91f6f"
+            ]
+        ]
+    },
+    {
+        "id": "22de4f11de0a8060",
+        "type": "ui_toast",
+        "z": "7123022d2d45c449",
+        "position": "dialog",
+        "displayTime": "5",
+        "highlight": "success",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "登記確認",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "登記確認通知",
+        "name": "登記確認通知",
+        "x": 1620,
+        "y": 1280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6491a7b1905fa266",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "重置表單",
+        "func": "// 清空病患資料\nflow.set('patientData', {});\nflow.set('tempPatientData', null);\nflow.set('assignedBed', null);\n\n// 建立重置表單的訊息\nconst resetFormMsg = {\n    topic: \"form_reset\",\n    payload: {\n        id_number: \"\",\n        name: \"\",\n        age: \"\",\n        gender: \"\"\n    }\n};\n\n// 建立重置科別與醫師選單的訊息\nconst resetDoctorMsg = {\n    topic: \"reset_doctor\",\n    payload: \"\"\n};\n\n// 記錄重置操作\nnode.warn(\"表單已重置\");\n\nreturn [resetFormMsg, resetDoctorMsg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 1260,
+        "wires": [
+            [
+                "336db3955fbea2bd"
+            ],
+            [
+                "cf93e403300bcd5b"
+            ]
+        ]
+    },
+    {
+        "id": "336db3955fbea2bd",
+        "type": "ui_form",
+        "z": "7123022d2d45c449",
+        "name": "病患資料表單",
+        "label": "病患資料登記",
+        "group": "64ba3ffbda45c3da",
+        "order": 2,
+        "width": 12,
+        "height": 1,
+        "options": [
+            {
+                "label": "病歷號(英文+六位數字)",
+                "value": "id_number",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "姓名",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "年齡",
+                "value": "age",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "性別",
+                "value": "gender",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "id_number": "",
+            "name": "",
+            "age": "",
+            "gender": ""
+        },
+        "payload": "",
+        "submit": "提交資料",
+        "cancel": "取消",
+        "topic": "patient_registration",
+        "topicType": "str",
+        "splitLayout": false,
+        "className": "",
+        "x": 380,
+        "y": 1220,
+        "wires": [
+            [
+                "2175bb88af0daa38"
+            ]
+        ]
+    },
+    {
+        "id": "2175bb88af0daa38",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "暫存病患資料",
+        "func": "// 清除之前的科別與醫師選擇\nconst existingData = flow.get('patientData') || {};\n\n// 合併表單數據，保持基本資料但清除之前的科別與醫師資訊\nconst patientData = {\n    ...msg.payload,\n    department: null,\n    doctor: null\n};\n\n// 儲存表單數據到 flow context\nflow.set('patientData', patientData);\n\n// 記錄操作\nnode.warn(`收到病患資料: ${JSON.stringify(patientData)}`);\n\n// 將表單數據傳遞\nmsg.patient = patientData;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 1220,
+        "wires": [
+            [
+                "cf93e403300bcd5b"
+            ]
+        ]
+    },
+    {
+        "id": "8f02161b14c6c863",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢可用床位",
+        "x": 1220,
+        "y": 1240,
+        "wires": [
+            [
+                "3c2f66c5f482cc95"
+            ]
+        ]
+    },
+    {
+        "id": "3c2f66c5f482cc95",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理床位分配",
+        "func": "// 獲取查詢結果\nconst beds = msg.payload;\n\n// 獲取臨時保存的患者資料\nconst patientData = flow.get('tempPatientData') || {};\n\n// 檢查是否找到可用床位\nif (!beds || beds.length === 0) {\n    // 沒有該科別的可用床位\n    node.warn(`無法找到科別 ${patientData.department} 的可用床位`);\n    \n    // 仍然將病患資料保存，但不分配床位\n    msg.topic = `\n    INSERT INTO patients (\n        id_number, \n        name, \n        age, \n        gender, \n        department, \n        doctor,\n        registration_date\n    ) VALUES (\n        '${patientData.id_number}', \n        '${patientData.name}', \n        ${patientData.age}, \n        '${patientData.gender}', \n        '${patientData.department}', \n        '${patientData.doctor}',\n        NOW()\n    );\n    `;\n    \n    // 構建通知訊息\n    const notificationMsg = {\n        topic: \"登記成功但沒有床位\",\n        payload: `${patientData.name} 已成功登記到 ${patientData.department} ${patientData.doctor}醫師門診，但目前無可用床位`,\n        highlight: \"warning\"\n    };\n    \n    return [msg, notificationMsg];\n}\n\n// 獲取隨機分配的床位\nconst assignedBed = beds[0];\nnode.warn(`分配床位: ${JSON.stringify(assignedBed)}`);\n\n// 更新床位狀態的SQL（將床位標記為佔用）\nconst updateBedSql = `\nUPDATE beds\nSET status = '佔用', patient_id = @patient_id\nWHERE bed_id = ${assignedBed.bed_id};\n`;\n\n// 插入病患資料並獲取插入的ID\nconst insertPatientSql = `\nINSERT INTO patients (\n    id_number, \n    name, \n    age, \n    gender, \n    department, \n    doctor,\n    registration_date,\n    bed_id\n) VALUES (\n    '${patientData.id_number}', \n    '${patientData.name}', \n    ${patientData.age}, \n    '${patientData.gender}', \n    '${patientData.department}', \n    '${patientData.doctor}',\n    NOW(),\n    ${assignedBed.bed_id}\n);\n`;\n\n// 設置SQL操作\nmsg.topic = insertPatientSql;\n\n// 保存床位信息以供後續使用\nflow.set('assignedBed', assignedBed);\n\n// 構建通知訊息\nconst notificationMsg = {\n    topic: \"登記成功並分配床位\",\n    payload: `${patientData.name} 已成功登記到 ${patientData.department} ${patientData.doctor}醫師門診，並分配到 ${assignedBed.floor}樓 ${assignedBed.room_number}-${assignedBed.bed_number} 床位`,\n    highlight: \"success\"\n};\n\nreturn [msg, notificationMsg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 1240,
+        "wires": [
+            [
+                "b318a01af3cda3bf"
+            ],
+            [
+                "22de4f11de0a8060"
+            ]
+        ]
+    },
+    {
+        "id": "ed6ef2919ba91f6f",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "更新床位狀態",
+        "func": "// 獲取分配的床位信息\nconst assignedBed = flow.get('assignedBed');\n\n// 檢查是否有分配床位\nif (!assignedBed) {\n    // 沒有分配床位，直接重置表單\n    return [null, msg];\n}\n\n// 獲取插入的患者ID（如果資料庫返回）\nlet patientId = null;\nif (msg.payload && msg.payload.insertId) {\n    patientId = msg.payload.insertId;\n}\n\n// 如果沒有獲取到插入ID，使用臨時ID\nif (!patientId) {\n    patientId = 'LAST_INSERT_ID()';\n}\n\n// 建立更新床位的SQL語句\nmsg.topic = `\nUPDATE beds\nSET status = '佔用', patient_id = ${patientId}\nWHERE bed_id = ${assignedBed.bed_id};\n`;\n\nreturn [msg, null];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1840,
+        "y": 1340,
+        "wires": [
+            [
+                "1134dc9b825520a2"
+            ]
+        ]
+    },
+    {
+        "id": "1134dc9b825520a2",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "更新床位資料庫",
+        "x": 1000,
+        "y": 1480,
+        "wires": [
+            [
+                "6491a7b1905fa266"
+            ]
+        ]
+    },
+    {
+        "id": "a67081fa0526d0b8",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理病床狀態變更",
+        "func": "// 處理病床狀態變更請求\nif (msg.payload && msg.payload.action === 'change-status') {\n    // 獲取請求參數\n    const bedId = msg.payload.bedId;\n    const newStatus = msg.payload.newStatus;\n\n    if (!bedId || !newStatus) {\n        // 如果參數不完整，返回錯誤\n        node.error(\"狀態更新請求缺少必要參數\");\n        msg.payload = {\n            error: true,\n            message: \"狀態更新失敗：缺少必要參數\"\n        };\n        return msg;\n    }\n\n    // 根據英文狀態代碼映射到中文狀態值（資料庫使用中文狀態）\n    let dbStatus;\n    switch (newStatus) {\n        case 'available':\n            dbStatus = '可用';\n            break;\n        case 'occupied':\n            dbStatus = '佔用';\n            break;\n        case 'cleaning':\n            dbStatus = '待清潔';\n            break;\n        case 'maintenance':\n            dbStatus = '維修';\n            break;\n        default:\n            node.error(`無效的狀態代碼: ${newStatus}`);\n            msg.payload = {\n                error: true,\n                message: `狀態更新失敗：無效的狀態代碼 ${newStatus}`\n            };\n            return msg;\n    }\n\n    // 構建SQL語句 - 針對不同操作\n    let updateSQL = \"\";\n\n    // 特殊處理出院操作\n    if (newStatus === 'cleaning') {\n        // 更新病床狀態為待清潔，並將patient_id設為NULL\n        updateSQL = `\n            UPDATE beds \n            SET status = '待清潔',\n                patient_id = NULL\n            WHERE bed_id = ${bedId}\n        `;\n\n        // 記錄操作\n        node.warn(`執行出院操作：更新病床 ${bedId} 狀態為待清潔並清除病人關聯`);\n    }\n    // 如果狀態是打掃完畢，更新最近清潔時間\n    else if (newStatus === 'available') {\n        const currentTime = new Date().toISOString().slice(0, 19).replace('T', ' ');\n        updateSQL = `\n            UPDATE beds \n            SET status = '${dbStatus}', \n                last_cleaned = '${currentTime}' \n            WHERE bed_id = ${bedId}\n        `;\n\n        // 記錄操作\n        node.warn(`執行病床狀態更新: ${bedId} -> ${dbStatus} 並更新清潔時間`);\n    }\n    // 其他普通狀態更新\n    else {\n        updateSQL = `\n            UPDATE beds \n            SET status = '${dbStatus}' \n            WHERE bed_id = ${bedId}\n        `;\n\n        // 記錄操作\n        node.warn(`執行普通病床狀態更新: ${bedId} -> ${dbStatus}`);\n    }\n\n    // 設置 SQL 查詢\n    msg.topic = updateSQL;\n\n    // 返回更新請求\n    return [msg, null];\n}\n// 處理關閉詳情對話框請求\nelse if (msg.payload && msg.payload.action === 'close-detail') {\n    // 簡單返回空消息以關閉對話框\n    const closeMsg = { payload: {} };\n    return [null, closeMsg];\n}\n// 其他未處理的請求\nelse {\n    return [null, null];\n}",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2130,
+        "y": 500,
+        "wires": [
+            [
+                "9d143c03279ede83"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "9d143c03279ede83",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "更新病床狀態",
+        "x": 2140,
+        "y": 440,
+        "wires": [
+            [
+                "8e6804c3d631c39c"
+            ]
+        ]
+    },
+    {
+        "id": "8e6804c3d631c39c",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理更新結果",
+        "func": "// 獲取更新結果\nconst result = msg.payload;\nconst affectedRows = result ? result.affectedRows || 0 : 0;\n\n// 根據結果建立消息\nlet notifyMsg, reloadMsg, clearDetailMsg;\n\n// 檢查是否成功更新\nif (affectedRows > 0) {\n    // 創建成功通知消息\n    notifyMsg = {\n        topic: \"狀態更新\",\n        payload: `病床狀態更新成功，影響 ${affectedRows} 筆記錄`\n    };\n    \n    // 創建重新載入數據的消息\n    reloadMsg = {\n        topic: \"refresh\",\n        payload: {}\n    };\n    \n    // 創建清除詳情視圖的消息\n    clearDetailMsg = {\n        payload: {}\n    };\n} else {\n    // 創建失敗通知消息\n    notifyMsg = {\n        topic: \"狀態更新\",\n        payload: \"病床狀態更新失敗，沒有記錄被更新\"\n    };\n    \n    // 不需要重新載入或清除視圖\n    reloadMsg = null;\n    clearDetailMsg = null;\n}\n\n// 返回消息\nreturn [notifyMsg, reloadMsg, clearDetailMsg];",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 440,
+        "wires": [
+            [
+                "07d5e4cf3e7f73ac"
+            ]
+        ]
+    },
+    {
+        "id": "07d5e4cf3e7f73ac",
+        "type": "ui_toast",
+        "z": "7123022d2d45c449",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "狀態更新通知",
+        "x": 2540,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "b7b2b852465f1f6d",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "d80e0a8f8ed7dd97",
+        "name": "警報監控面板",
+        "order": 2,
+        "width": 6,
+        "height": 5,
+        "format": "<div class=\"alert-monitor\">\n    <div class=\"alert-header\">\n        <h3>即時警報監控</h3>\n        <div class=\"alert-controls\">\n            <button ng-click=\"refreshAlerts()\" class=\"refresh-btn\" title=\"手動刷新警報\">\n                <i class=\"fa fa-refresh\"></i>\n            </button>\n            <button ng-click=\"toggleHistory()\" class=\"history-btn\" title=\"查看歷史警報\">\n                <i class=\"fa fa-history\"></i>\n            </button>\n        </div>\n    </div>\n    \n    <div class=\"alert-tabs\">\n        <div class=\"tab\" ng-class=\"{active: !showHistory}\" ng-click=\"showHistory = false\">目前警報</div>\n        <div class=\"tab\" ng-class=\"{active: showHistory}\" ng-click=\"showHistory = true\">歷史記錄</div>\n    </div>\n    \n    <!-- 當前警報列表 -->\n    <div class=\"alert-list\" ng-show=\"!showHistory\">\n        <div class=\"no-alerts\" ng-if=\"!currentAlerts || currentAlerts.length === 0\">\n            目前沒有警報\n        </div>\n        \n        <div class=\"alert-item\" \n             ng-repeat=\"alert in currentAlerts\" \n             ng-class=\"{'high': alert.level === 'high', 'medium': alert.level === 'medium', 'low': alert.level === 'low'}\">\n            <div class=\"alert-header\">\n                <span class=\"alert-title\">{{alert.title}}</span>\n                <span class=\"alert-time\">{{alert.time | date:'HH:mm:ss'}}</span>\n            </div>\n            <div class=\"alert-message\">{{alert.message}}</div>\n            <div class=\"alert-actions\">\n                <button ng-click=\"acknowledgeAlert(alert)\" class=\"ack-btn\" ng-if=\"!alert.acknowledged\">\n                    確認\n                </button>\n                <span class=\"acknowledged\" ng-if=\"alert.acknowledged\">\n                    <i class=\"fa fa-check\"></i> 已確認\n                </span>\n            </div>\n        </div>\n    </div>\n    \n    <!-- 歷史警報列表 -->\n    <div class=\"alert-list history\" ng-show=\"showHistory\">\n        <div class=\"no-alerts\" ng-if=\"!alertHistory || alertHistory.length === 0\">\n            無歷史警報記錄\n        </div>\n        \n        <div class=\"alert-item\" \n             ng-repeat=\"alert in alertHistory\" \n             ng-class=\"{'high': alert.level === 'high', 'medium': alert.level === 'medium', 'low': alert.level === 'low', 'resolved': alert.resolved}\">\n            <div class=\"alert-header\">\n                <span class=\"alert-title\">{{alert.title}}</span>\n                <span class=\"alert-time\">{{alert.time | date:'MM-dd HH:mm'}}</span>\n            </div>\n            <div class=\"alert-message\">{{alert.message}}</div>\n            <div class=\"alert-footer\" ng-if=\"alert.resolvedTime\">\n                <span class=\"resolved-time\">解決於: {{alert.resolvedTime | date:'MM-dd HH:mm'}}</span>\n            </div>\n        </div>\n    </div>\n    \n    <div class=\"alert-summary\" ng-if=\"!showHistory && alertSummary\">\n        <div class=\"summary-item\">\n            <span class=\"label\">重要警報:</span>\n            <span class=\"value high\">{{alertSummary.high || 0}}</span>\n        </div>\n        <div class=\"summary-item\">\n            <span class=\"label\">中等警報:</span>\n            <span class=\"value medium\">{{alertSummary.medium || 0}}</span>\n        </div>\n        <div class=\"summary-item\">\n            <span class=\"label\">一般提醒:</span>\n            <span class=\"value low\">{{alertSummary.low || 0}}</span>\n        </div>\n    </div>\n    \n    <div class=\"last-updated\" ng-if=\"lastUpdated\">\n        最後更新: {{lastUpdated | date:'yyyy-MM-dd HH:mm:ss'}}\n    </div>\n</div>\n\n<style>\n.alert-monitor {\n    font-family: 'Microsoft JhengHei', 'Roboto', sans-serif;\n    padding: 15px;\n    background-color: #f9f9f9;\n    border-radius: 8px;\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n}\n\n.alert-header {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    margin-bottom: 10px;\n}\n\n.alert-header h3 {\n    margin: 0;\n    color: #333;\n    font-size: 16px;\n}\n\n.alert-controls button {\n    background: none;\n    border: none;\n    color: #555;\n    cursor: pointer;\n    font-size: 14px;\n    margin-left: 8px;\n    padding: 5px;\n}\n\n.alert-controls button:hover {\n    color: #1976d2;\n}\n\n.alert-tabs {\n    display: flex;\n    border-bottom: 1px solid #ddd;\n    margin-bottom: 10px;\n}\n\n.alert-tabs .tab {\n    padding: 8px 16px;\n    cursor: pointer;\n    color: #666;\n}\n\n.alert-tabs .tab.active {\n    border-bottom: 2px solid #1976d2;\n    color: #1976d2;\n    font-weight: bold;\n}\n\n.alert-list {\n    flex: 1;\n    overflow-y: auto;\n    margin-bottom: 10px;\n}\n\n.no-alerts {\n    color: #888;\n    font-style: italic;\n    padding: 20px 0;\n    text-align: center;\n}\n\n.alert-item {\n    margin-bottom: 10px;\n    padding: 10px;\n    border-radius: 5px;\n    border-left: 4px solid;\n    background-color: white;\n}\n\n.alert-item.high {\n    border-left-color: #d9534f;\n    background-color: #f9f2f2;\n}\n\n.alert-item.medium {\n    border-left-color: #f0ad4e;\n    background-color: #faf6f0;\n}\n\n.alert-item.low {\n    border-left-color: #5bc0de;\n    background-color: #f2f9fa;\n}\n\n.alert-item.resolved {\n    opacity: 0.7;\n}\n\n.alert-header {\n    display: flex;\n    justify-content: space-between;\n    margin-bottom: 5px;\n}\n\n.alert-title {\n    font-weight: bold;\n}\n\n.alert-time {\n    color: #888;\n    font-size: 12px;\n}\n\n.alert-message {\n    font-size: 14px;\n    margin-bottom: 8px;\n}\n\n.alert-actions {\n    display: flex;\n    justify-content: flex-end;\n}\n\n.ack-btn {\n    background-color: #f8f9fa;\n    border: 1px solid #ddd;\n    border-radius: 3px;\n    color: #333;\n    cursor: pointer;\n    font-size: 12px;\n    padding: 3px 8px;\n}\n\n.ack-btn:hover {\n    background-color: #e9ecef;\n}\n\n.acknowledged {\n    color: #28a745;\n    font-size: 12px;\n}\n\n.alert-footer {\n    font-size: 12px;\n    color: #888;\n    text-align: right;\n    margin-top: 5px;\n}\n\n.alert-summary {\n    display: flex;\n    justify-content: space-between;\n    margin-top: 5px;\n    padding-top: 10px;\n    border-top: 1px solid #eee;\n}\n\n.summary-item {\n    text-align: center;\n    flex: 1;\n}\n\n.summary-item .label {\n    font-size: 12px;\n    color: #666;\n    display: block;\n    margin-bottom: 5px;\n}\n\n.summary-item .value {\n    font-size: 16px;\n    font-weight: bold;\n}\n\n.value.high {\n    color: #d9534f;\n}\n\n.value.medium {\n    color: #f0ad4e;\n}\n\n.value.low {\n    color: #5bc0de;\n}\n\n.last-updated {\n    text-align: right;\n    color: #999;\n    font-size: 11px;\n    margin-top: 5px;\n}\n</style>\n\n<script>\n(function(scope) {\n    // 初始化狀態\n    scope.currentAlerts = [];\n    scope.alertHistory = [];\n    scope.alertSummary = { high: 0, medium: 0, low: 0 };\n    scope.showHistory = false;\n    scope.lastUpdated = null;\n    \n    // 監聽消息\n    scope.$watch('msg', function(msg) {\n        if (msg && msg.payload) {\n            if (msg.payload.alerts) {\n                updateAlerts(msg.payload.alerts);\n            }\n            if (msg.payload.summary) {\n                scope.alertSummary = msg.payload.summary;\n            }\n            scope.lastUpdated = new Date();\n        }\n    });\n    \n    // 更新警報列表\n    function updateAlerts(alerts) {\n        if (!Array.isArray(alerts)) return;\n        \n        // 更新現有警報\n        scope.currentAlerts = alerts.map(alert => {\n            // 檢查此警報是否已存在且已確認\n            const existingAlert = scope.currentAlerts.find(a => \n                a.title === alert.title && \n                a.level === alert.level &&\n                a.message === alert.message);\n                \n            if (existingAlert && existingAlert.acknowledged) {\n                alert.acknowledged = true;\n            }\n            return alert;\n        });\n    }\n    \n    // 手動刷新警報\n    scope.refreshAlerts = function() {\n        scope.send({ action: 'refresh-alerts' });\n    };\n    \n    // 確認警報\n    scope.acknowledgeAlert = function(alert) {\n        alert.acknowledged = true;\n        \n        // 發送確認消息到後端\n        scope.send({\n            action: 'acknowledge-alert',\n            alert: {\n                title: alert.title,\n                level: alert.level,\n                time: alert.time\n            }\n        });\n    };\n    \n    // 切換歷史記錄顯示\n    scope.toggleHistory = function() {\n        scope.showHistory = !scope.showHistory;\n        \n        // 如果切換到歷史記錄，則請求歷史數據\n        if (scope.showHistory && (!scope.alertHistory || scope.alertHistory.length === 0)) {\n            scope.send({ action: 'get-alert-history' });\n        }\n    };\n    \n    // 設置定時刷新（每分鐘）\n    setInterval(function() {\n        if (!scope.showHistory) {\n            scope.refreshAlerts();\n            scope.$apply();\n        }\n    }, 60000);\n    \n    // 初始載入\n    setTimeout(scope.refreshAlerts, 1000);\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1920,
+        "y": 920,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0e179215494b1a80",
+        "type": "inject",
+        "z": "7123022d2d45c449",
+        "name": "定時檢查容量",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "60",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 820,
+        "wires": [
+            [
+                "0c1b94010b704e82"
+            ]
+        ]
+    },
+    {
+        "id": "0c1b94010b704e82",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備科室容量查詢",
+        "func": "// 準備查詢所有科室的容量\nmsg.topic = `\nSELECT \n    department, \n    COUNT(*) as total_beds, \n    SUM(CASE WHEN status = '佔用' THEN 1 ELSE 0 END) as occupied_beds,\n    ROUND(SUM(CASE WHEN status = '佔用' THEN 1 ELSE 0 END) * 100 / COUNT(*), 1) as occupancy_rate\nFROM beds\nGROUP BY department\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 820,
+        "wires": [
+            [
+                "f380d05c9923760b"
+            ]
+        ]
+    },
+    {
+        "id": "f380d05c9923760b",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢科室容量",
+        "x": 860,
+        "y": 820,
+        "wires": [
+            [
+                "9de6590a99864758"
+            ]
+        ]
+    },
+    {
+        "id": "9de6590a99864758",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備急診與ICU查詢",
+        "func": "// 保存科室容量數據\nmsg.departmentCapacity = msg.payload;\n\n// 準備查詢急診和ICU的特定數據\nmsg.topic = `\nSELECT \n    department, \n    COUNT(*) as total_beds, \n    SUM(CASE WHEN status = '可用' THEN 1 ELSE 0 END) as available_beds,\n    SUM(CASE WHEN status = '佔用' THEN 1 ELSE 0 END) as occupied_beds\nFROM beds\nWHERE department IN ('急診部', '重症監護室')\nGROUP BY department\n`;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 820,
+        "wires": [
+            [
+                "9fd882d45a338403"
+            ]
+        ]
+    },
+    {
+        "id": "9fd882d45a338403",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢急診ICU容量",
+        "x": 1330,
+        "y": 820,
+        "wires": [
+            [
+                "8cd101956a8bb49e"
+            ]
+        ]
+    },
+    {
+        "id": "8cd101956a8bb49e",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "生成警報",
+        "func": "// 獲取結果\nconst departmentCapacity = msg.departmentCapacity || [];\nconst urgentCapacity = msg.payload || [];\n\n// 整理急診和ICU數據\nconst urgentData = {};\nurgentCapacity.forEach(item => {\n    urgentData[item.department] = item;\n});\n\n// 產生警報清單\nconst alerts = [];\nconst now = new Date();\n\n// 檢查科室容量警報\ndepartmentCapacity.forEach(dept => {\n    if (dept.occupancy_rate >= 90) {\n        alerts.push({\n            title: `${dept.department}病床即將滿床`,\n            message: `${dept.department}目前佔用率 ${dept.occupancy_rate}%，僅剩 ${dept.total_beds - dept.occupied_beds} 張可用病床`,\n            level: 'high',\n            time: now,\n            department: dept.department\n        });\n    } else if (dept.occupancy_rate >= 80) {\n        alerts.push({\n            title: `${dept.department}病床使用率過高`,\n            message: `${dept.department}目前佔用率 ${dept.occupancy_rate}%，請注意病床調配`,\n            level: 'medium',\n            time: now,\n            department: dept.department\n        });\n    }\n});\n\n// 檢查急診警報\nif (urgentData['急診部'] && urgentData['急診部'].available_beds <= 2) {\n    alerts.push({\n        title: '急診部病床緊急警報',\n        message: `急診部僅剩 ${urgentData['急診部'].available_beds} 張可用病床，請立即處理`,\n        level: 'high',\n        time: now,\n        department: '急診部'\n    });\n}\n\n// 檢查ICU警報\nif (urgentData['重症監護室'] && urgentData['重症監護室'].available_beds <= 1) {\n    alerts.push({\n        title: 'ICU 病床警報',\n        message: `重症監護室僅剩 ${urgentData['重症監護室'].available_beds} 張可用病床，請立即通知醫護團隊`,\n        level: 'high',\n        time: now,\n        department: '重症監護室'\n    });\n}\n\n// 保存當前警報到 flow context 中\nlet allAlerts = flow.get('currentAlerts') || [];\n\n// 移除超過 24 小時的警報\nconst oneDayAgo = new Date(now.getTime() - 24 * 60 * 60 * 1000);\nallAlerts = allAlerts.filter(alert => new Date(alert.time) > oneDayAgo);\n\n// 更新或添加新警報\nalerts.forEach(newAlert => {\n    // 檢查是否已存在相同科室相同級別的警報\n    const existingAlertIndex = allAlerts.findIndex(alert => \n        alert.department === newAlert.department && \n        alert.level === newAlert.level &&\n        !alert.resolved\n    );\n    \n    if (existingAlertIndex >= 0) {\n        // 更新現有警報\n        allAlerts[existingAlertIndex] = newAlert;\n        \n        // 保留確認狀態\n        if (allAlerts[existingAlertIndex].acknowledged) {\n            newAlert.acknowledged = true;\n        }\n    } else {\n        // 添加新警報\n        allAlerts.push(newAlert);\n    }\n});\n\n// 檢查哪些警報已解決\nconst activeAlertsByDept = {};\nalerts.forEach(alert => {\n    if (!activeAlertsByDept[alert.department]) {\n        activeAlertsByDept[alert.department] = [];\n    }\n    activeAlertsByDept[alert.department].push(alert.level);\n});\n\n// 將不再活躍的警報標記為已解決\nallAlerts.forEach(alert => {\n    if (!alert.resolved) {\n        const deptAlerts = activeAlertsByDept[alert.department] || [];\n        if (!deptAlerts.includes(alert.level)) {\n            alert.resolved = true;\n            alert.resolvedTime = now;\n            \n            // 添加到歷史記錄\n            const history = flow.get('alertHistory') || [];\n            history.unshift(alert);\n            // 只保留最近 100 條歷史記錄\n            if (history.length > 100) {\n                history.pop();\n            }\n            flow.set('alertHistory', history);\n        }\n    }\n});\n\n// 更新 flow context\nflow.set('currentAlerts', allAlerts);\n\n// 篩選出當前活躍的警報（未解決的）\nconst activeAlerts = allAlerts.filter(alert => !alert.resolved);\n\n// 統計警報數量\nconst summary = {\n    high: activeAlerts.filter(a => a.level === 'high').length,\n    medium: activeAlerts.filter(a => a.level === 'medium').length,\n    low: activeAlerts.filter(a => a.level === 'low').length\n};\n\n// 設置消息負載\nmsg.payload = {\n    alerts: activeAlerts,\n    summary: summary\n};\n\n// 準備通知消息\nlet notification = null;\n\n// 修改返回代碼，確保格式化通知\nif (summary.high > 0) {\n    notification = {\n        topic: '發現重要警報', // 注意使用 topic 而不是 title\n        payload: `系統檢測到 ${summary.high} 個重要警報，請立即查看`,\n        position: \"top right\",\n        highlight: \"red\"\n    };\n}\n\n// 分開返回兩個消息\nif (notification) {\n    return [msg, notification];\n} else {\n    return [msg, null];\n}\n",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// 初始化 flow context 變數\nflow.set('currentAlerts', flow.get('currentAlerts') || []);\nflow.set('alertHistory', flow.get('alertHistory') || []);\n",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 820,
+        "wires": [
+            [
+                "b7b2b852465f1f6d"
+            ],
+            [
+                "5955b156585e250e"
+            ]
+        ]
+    },
+    {
+        "id": "5955b156585e250e",
+        "type": "ui_toast",
+        "z": "7123022d2d45c449",
+        "position": "top right",
+        "displayTime": "5",
+        "highlight": "red",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "查看",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "警報通知",
+        "x": 1640,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "ae596bc0d0c44ef6",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理警報確認",
+        "func": "// 處理警報確認\nif (msg.payload && msg.payload.action === 'acknowledge-alert' && msg.payload.alert) {\n    const alert = msg.payload.alert;\n    \n    // 獲取當前警報列表\n    const currentAlerts = flow.get('currentAlerts') || [];\n    \n    // 查找並更新對應警報的確認狀態\n    currentAlerts.forEach(a => {\n        if (a.title === alert.title && \n            a.level === alert.level && \n            new Date(a.time).getTime() === new Date(alert.time).getTime()) {\n            a.acknowledged = true;\n            a.acknowledgedTime = new Date();\n        }\n    });\n    \n    // 更新 flow context\n    flow.set('currentAlerts', currentAlerts);\n    \n    // 準備返回更新後的警報列表\n    const activeAlerts = currentAlerts.filter(a => !a.resolved);\n    \n    // 更新統計數據\n    const summary = {\n        high: activeAlerts.filter(a => a.level === 'high').length,\n        medium: activeAlerts.filter(a => a.level === 'medium').length,\n        low: activeAlerts.filter(a => a.level === 'low').length\n    };\n    \n    // 設置返回消息\n    msg.payload = {\n        alerts: activeAlerts,\n        summary: summary\n    };\n    \n    return msg;\n}\n\n// 處理警報歷史請求\nif (msg.payload && msg.payload.action === 'get-alert-history') {\n    const history = flow.get('alertHistory') || [];\n    \n    msg.payload = {\n        alertHistory: history\n    };\n    \n    return msg;\n}\n\n// 處理刷新請求\nif (msg.payload && msg.payload.action === 'refresh-alerts') {\n    // 直接觸發重新檢查\n    return {payload: new Date()};\n}\n\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 920,
+        "wires": [
+            [
+                "6d0c6e085e24a4dd"
+            ]
+        ]
+    },
+    {
+        "id": "dec7f6085f3219ae",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "d80e0a8f8ed7dd97",
+        "name": "警報請求處理",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<script>\n(function(scope) {\n    // 監聽 msg 消息\n    scope.$watch('msg', function(msg) {\n        // 轉發任何傳入的消息到警報監控面板\n        if (msg && msg.payload) {\n            scope.$broadcast('alert-data', msg.payload);\n        }\n    });\n    \n    // 監聽來自警報監控面板的請求\n    scope.$on('alert-request', function(event, data) {\n        scope.send({payload: data});\n    });\n})(scope);\n</script>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 410,
+        "y": 920,
+        "wires": [
+            [
+                "ae596bc0d0c44ef6"
+            ]
+        ]
+    },
+    {
+        "id": "6d0c6e085e24a4dd",
+        "type": "switch",
+        "z": "7123022d2d45c449",
+        "name": "路由警報請求",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "type",
+                "v": "date",
+                "vt": "date"
+            },
+            {
+                "t": "jsonata",
+                "v": "$exists(alerts)",
+                "vt": "jsonata"
+            },
+            {
+                "t": "jsonata",
+                "v": "$exists(alertHistory)",
+                "vt": "jsonata"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 820,
+        "y": 920,
+        "wires": [
+            [
+                "0c1b94010b704e82"
+            ],
+            [
+                "b7b2b852465f1f6d"
+            ],
+            [
+                "b7b2b852465f1f6d"
+            ]
+        ]
+    },
+    {
+        "id": "2e77623e05e1ea7a",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "手動檢查警報",
+        "group": "d80e0a8f8ed7dd97",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "立即檢查警報狀態",
+        "tooltip": "立即執行一次警報條件檢查",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "fa-exclamation-triangle",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 460,
+        "y": 760,
+        "wires": [
+            [
+                "0c1b94010b704e82"
+            ]
+        ]
+    },
+    {
+        "id": "b88a5fc9c0ea7c2e",
+        "type": "comment",
+        "z": "7123022d2d45c449",
+        "name": "病人管理",
+        "info": "",
+        "x": 140,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "ab39ecee47b7f4af",
+        "type": "comment",
+        "z": "7123022d2d45c449",
+        "name": "警報監控",
+        "info": "",
+        "x": 320,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "c02c9c3a24dcea58",
+        "type": "comment",
+        "z": "7123022d2d45c449",
+        "name": "使用說明",
+        "info": "",
+        "x": 120,
+        "y": 2260,
+        "wires": []
+    },
+    {
+        "id": "804fa4a8b539d990",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "刷新按鈕",
+        "group": "663bf54657b2f2d8",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "刷新",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#d98c8c",
+        "className": "",
+        "icon": "refresh",
+        "payload": "{\"action\":\"refresh-stats\"}",
+        "payloadType": "json",
+        "topic": "refresh",
+        "topicType": "str",
+        "x": 260,
+        "y": 1720,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "0c6570939bd86d4e",
+        "type": "link in",
+        "z": "7123022d2d45c449",
+        "name": "接收UI操作",
+        "links": [],
+        "x": 205,
+        "y": 2020,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "c7df6db516e78f8f",
+        "type": "inject",
+        "z": "7123022d2d45c449",
+        "name": "自動刷新 (每小時)",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.5,
+        "topic": "auto-refresh",
+        "payload": "{\"action\":\"refresh-stats\"}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 1980,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "e7f3d9881c4dcfee",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理統計請求",
+        "func": "// 獲取時間範圍參數\nlet range = 'day'; // 默認為每日統計\n\n// 從UI接收篩選條件\nif (msg.payload && msg.payload.action) {\n    if (msg.payload.action === 'filter-time' && msg.payload.range) {\n        range = msg.payload.range;\n    } else if (msg.payload.action === 'refresh-stats') {\n        // 刷新操作，繼續使用當前範圍\n        range = flow.get('currentTimeRange') || 'day';\n    }\n}\n\n// 保存當前範圍到flow context\nflow.set('currentTimeRange', range);\n\n// 準備查詢床位數據\nmsg.topic = 'SELECT * FROM beds';\nmsg.timeRange = range;\n\n// 顯示載入提示\nconst loadingMsg = { \n    topic: \"載入中\",\n    payload: \"正在載入醫院統計數據...\"\n};\n\nreturn [msg, loadingMsg];",
+        "outputs": 2,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// 初始化統計範圍\nflow.set('currentTimeRange', 'day');",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 2000,
+        "wires": [
+            [
+                "4029bfe4ee87dcb3"
+            ],
+            [
+                "13c90bd3e07b6366"
+            ]
+        ]
+    },
+    {
+        "id": "13c90bd3e07b6366",
+        "type": "ui_toast",
+        "z": "7123022d2d45c449",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "顯示載入提示",
+        "x": 680,
+        "y": 2060,
+        "wires": []
+    },
+    {
+        "id": "4029bfe4ee87dcb3",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢床位數據",
+        "x": 680,
+        "y": 1940,
+        "wires": [
+            [
+                "013cdcfb73504059"
+            ]
+        ]
+    },
+    {
+        "id": "013cdcfb73504059",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備病患查詢",
+        "func": "// 保存床位數據\nmsg.bedsData = msg.payload;\n\n// 準備查詢病患數據\nmsg.topic = 'SELECT * FROM patients';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1940,
+        "wires": [
+            [
+                "fedd228815e49a58"
+            ]
+        ]
+    },
+    {
+        "id": "fedd228815e49a58",
+        "type": "mysql",
+        "z": "7123022d2d45c449",
+        "mydb": "60958245eccc262b",
+        "name": "查詢病患數據",
+        "x": 1080,
+        "y": 1940,
+        "wires": [
+            [
+                "9b6db9cf94b9ec46"
+            ]
+        ]
+    },
+    {
+        "id": "9b6db9cf94b9ec46",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "處理統計數據",
+        "func": "// 處理統計數據\ntry {\n    // 獲取數據\n    const beds = msg.bedsData || [];\n    const patients = msg.payload || [];\n    const timeRange = msg.timeRange || 'day';\n\n    // 記錄處理狀態\n    node.log(`處理統計數據：${beds.length} 張床位，${patients.length} 名病患`);\n\n    // 時間標籤和數據初始化\n    let timeLabels = [];\n    let occupancyData = [];\n    let admissionData = [];\n    let dischargeData = [];\n\n    // 根據時間範圍設定時間間隔\n    let timeFormat, numberOfPeriods;\n    let today = new Date();\n\n    // 根據時間範圍創建時間標籤\n    if (timeRange === 'day') {\n        // 最近30天數據\n        numberOfPeriods = 30;\n        for (let i = numberOfPeriods - 1; i >= 0; i--) {\n            const date = new Date();\n            date.setDate(date.getDate() - i);\n            timeLabels.push(formatDate(date));\n        }\n    } else if (timeRange === 'week') {\n        // 最近8週數據\n        numberOfPeriods = 8;\n        for (let i = numberOfPeriods - 1; i >= 0; i--) {\n            timeLabels.push(`第${numberOfPeriods - i}週`);\n        }\n    } else if (timeRange === 'month') {\n        // 最近12個月數據\n        numberOfPeriods = 12;\n        const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];\n        const currentMonth = today.getMonth();\n\n        for (let i = 0; i < numberOfPeriods; i++) {\n            const monthIndex = (currentMonth - i + 12) % 12;\n            timeLabels.unshift(monthNames[monthIndex]);\n        }\n    }\n\n    // 按時間處理入院數據 (從患者表)\n    const admissionTimeMap = {};\n\n    patients.forEach(patient => {\n        if (patient.registration_date) {\n            let timeLabel;\n            const registrationDate = new Date(patient.registration_date);\n\n            if (timeRange === 'day') {\n                // 日期格式 YYYY-MM-DD\n                timeLabel = formatDate(registrationDate);\n            } else if (timeRange === 'week') {\n                // 根據週數\n                const weekDiff = getWeekDifference(today, registrationDate);\n                if (weekDiff < numberOfPeriods) {\n                    timeLabel = `第${numberOfPeriods - weekDiff}週`;\n                }\n            } else if (timeRange === 'month') {\n                // 月份名\n                const monthNames = ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'];\n                const monthDiff = getMonthDifference(today, registrationDate);\n                if (monthDiff < numberOfPeriods) {\n                    const monthIndex = registrationDate.getMonth();\n                    timeLabel = monthNames[monthIndex];\n                }\n            }\n\n            if (timeLabel && timeLabels.includes(timeLabel)) {\n                admissionTimeMap[timeLabel] = (admissionTimeMap[timeLabel] || 0) + 1;\n            }\n        }\n    });\n\n    // 填充數據\n    timeLabels.forEach(label => {\n        // 根據時間標籤獲取入院數量\n        admissionData.push(admissionTimeMap[label] || 0);\n\n        // 出院暫無資料\n        dischargeData.push(0);\n\n        // 模擬佔用率（實際應根據歷史資料計算）\n        occupancyData.push(75 + Math.random() * 15);\n    });\n\n    // 處理科室統計\n    const deptStats = processDepartmentStats(beds);\n\n    // 處理樓層統計\n    const floorStats = processFloorStats(beds);\n\n    // 計算總體統計\n    const totalBeds = beds.length;\n    const occupiedBeds = beds.filter(bed => bed.status === '佔用').length;\n    const occupancyRate = totalBeds > 0 ? (occupiedBeds / totalBeds * 100) : 0;\n\n    // 計算總入院人數（根據患者表)\n    const totalAdmissions = patients.length;\n\n    // 計算平均住院天數\n    const stayDaysStats = calculateStayDays(patients);\n\n    // 準備本週入院統計\n    const weeklyStats = prepareWeeklyStats(patients);\n\n    // 最終統計對象\n    const stats = {\n        // 時間數據\n        timeLabels: timeLabels,\n        occupancyData: occupancyData,\n        admissionData: admissionData,\n        dischargeData: dischargeData,\n        transferData: Array(timeLabels.length).fill(0), // 暫無轉床數據\n\n        // 科室數據\n        departments: deptStats.departments,\n        departmentData: deptStats.bedCounts,\n        departmentOccupancyRates: deptStats.occupancyRates,\n\n        // 樓層數據\n        floors: floorStats.floors,\n        floorData: floorStats.bedCounts,\n        floorOccupancyRates: floorStats.occupancyRates,\n\n        // 週趨勢數據\n        weekDays: weeklyStats.days,\n        weeklyAdmissions: weeklyStats.admissions,\n        weeklyDischarges: weeklyStats.discharges,\n\n        // 總體統計\n        occupancyRate: parseFloat(occupancyRate.toFixed(1)),\n        admissions: totalAdmissions,\n        discharges: 0, // 暫無出院數據\n        transfers: 0, // 暫無轉床數據\n        avgStayDays: stayDaysStats.avgStayDays,\n        maxStayDays: stayDaysStats.maxStayDays,\n        minStayDays: stayDaysStats.minStayDays,\n\n        // 更新時間\n        lastUpdated: new Date().toISOString()\n    };\n\n    // 保存到flow以便其他模塊使用\n    flow.set('hospitalStats', stats);\n\n    // 返回數據用於UI顯示\n    msg.payload = stats;\n    msg.timeRange = timeRange;\n    return msg;\n} catch (error) {\n    node.error(\"處理統計數據錯誤: \" + error.message);\n    return { payload: { error: \"處理統計數據時發生錯誤\" } };\n}\n\n// ---- 輔助函數 ----\n\n// 日期格式化 YYYY-MM-DD\nfunction formatDate(date) {\n    const year = date.getFullYear();\n    const month = String(date.getMonth() + 1).padStart(2, '0');\n    const day = String(date.getDate()).padStart(2, '0');\n    return `${year}-${month}-${day}`;\n}\n\n// 獲取兩個日期之間的週數差\nfunction getWeekDifference(date1, date2) {\n    const oneWeek = 7 * 24 * 60 * 60 * 1000;\n    const firstDate = new Date(date1.getFullYear(), date1.getMonth(), date1.getDate());\n    const secondDate = new Date(date2.getFullYear(), date2.getMonth(), date2.getDate());\n    return Math.floor(Math.abs((firstDate.getTime() - secondDate.getTime())) / oneWeek);\n}\n\n// 獲取兩個日期之間的月數差\nfunction getMonthDifference(date1, date2) {\n    const months = (date1.getFullYear() - date2.getFullYear()) * 12;\n    return months + date1.getMonth() - date2.getMonth();\n}\n\n// 處理科室統計的函數\nfunction processDepartmentStats(bedsData) {\n    const deptMap = {};\n    const departments = [];\n    const bedCounts = [];\n    const occupancyRates = [];\n\n    // 按科室分組\n    bedsData.forEach(bed => {\n        const dept = bed.department;\n        if (!dept) return;\n\n        if (!deptMap[dept]) {\n            deptMap[dept] = { total: 0, occupied: 0 };\n        }\n\n        deptMap[dept].total++;\n        if (bed.status === '佔用') {\n            deptMap[dept].occupied++;\n        }\n    });\n\n    // 轉換為數組格式\n    for (const [dept, counts] of Object.entries(deptMap)) {\n        departments.push(dept);\n        bedCounts.push(counts.total);\n        const rate = counts.total > 0 ? (counts.occupied / counts.total) * 100 : 0;\n        occupancyRates.push(parseFloat(rate.toFixed(1)));\n    }\n\n    return { departments, bedCounts, occupancyRates };\n}\n\n// 處理樓層統計的函數\nfunction processFloorStats(bedsData) {\n    const floorMap = {};\n    const floors = [];\n    const bedCounts = [];\n    const occupancyRates = [];\n\n    // 按樓層分組\n    bedsData.forEach(bed => {\n        const floor = bed.floor;\n        if (!floor) return;\n\n        if (!floorMap[floor]) {\n            floorMap[floor] = { total: 0, occupied: 0 };\n        }\n\n        floorMap[floor].total++;\n        if (bed.status === '佔用') {\n            floorMap[floor].occupied++;\n        }\n    });\n\n    // 轉換為數組格式並排序\n    const sortedFloors = Object.keys(floorMap).sort((a, b) => Number(a) - Number(b));\n\n    sortedFloors.forEach(floor => {\n        floors.push(`${floor}樓`);\n        bedCounts.push(floorMap[floor].total);\n        const rate = floorMap[floor].total > 0 ?\n            (floorMap[floor].occupied / floorMap[floor].total) * 100 : 0;\n        occupancyRates.push(parseFloat(rate.toFixed(1)));\n    });\n\n    return { floors, bedCounts, occupancyRates };\n}\n\n// 計算住院天數的函數 - 已修正版本\nfunction calculateStayDays(patientsData) {\n    const stayDays = [];\n\n    patientsData.forEach(patient => {\n        if (patient.registration_date) {\n            // 如果有出院日期用出院日期，否則用當前日期\n            const endDate = patient.discharge_date ? new Date(patient.discharge_date) : new Date();\n            const startDate = new Date(patient.registration_date);\n\n            // 計算住院天數\n            const days = Math.round((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24));\n            if (days >= 0) stayDays.push(days);\n        }\n    });\n\n    // 計算平均、最長、最短住院天數\n    const avgStayDays = stayDays.length > 0 ?\n        parseFloat((stayDays.reduce((sum, days) => sum + days, 0) / stayDays.length).toFixed(1)) : 0;\n\n    const maxStayDays = stayDays.length > 0 ? Math.max(...stayDays) : 0;\n    const minStayDays = stayDays.length > 0 ? Math.min(...stayDays) : 0;\n\n    return { avgStayDays, maxStayDays, minStayDays };\n}\n\n// 準備本週統計的函數\nfunction prepareWeeklyStats(patientsData) {\n    const days = ['週一', '週二', '週三', '週四', '週五', '週六', '週日'];\n    const admissions = [0, 0, 0, 0, 0, 0, 0];\n    const discharges = [0, 0, 0, 0, 0, 0, 0]; // 出院數據暫無\n\n    // 獲取本週的開始日期 (週一)\n    const today = new Date();\n    const dayOfWeek = today.getDay() === 0 ? 7 : today.getDay(); // 轉換為 1-7 表示週一到週日\n    const mondayDate = new Date(today);\n    mondayDate.setDate(today.getDate() - (dayOfWeek - 1));\n    mondayDate.setHours(0, 0, 0, 0);\n\n    // 從患者表獲取本週入院數據\n    patientsData.forEach(patient => {\n        if (patient.registration_date) {\n            const registrationDate = new Date(patient.registration_date);\n\n            // 只計算本週數據\n            if (registrationDate >= mondayDate) {\n                const dayIndex = registrationDate.getDay() === 0 ? 6 : registrationDate.getDay() - 1; // 0-6 對應週一到週日\n                admissions[dayIndex]++;\n            }\n        }\n    });\n\n    return { days, admissions, discharges };\n}",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1940,
+        "wires": [
+            [
+                "39f86e62f579590b",
+                "5b60f299f8ab16af",
+                "0ffb45f429e08df1",
+                "8bb61cd478ede22e",
+                "fe562b3092a0d514",
+                "e8991b088af73670"
+            ]
+        ]
+    },
+    {
+        "id": "39f86e62f579590b",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備統計摘要",
+        "func": "// 準備統計摘要數據\nif (msg.payload && typeof msg.payload === 'object') {\n    // 從處理好的統計數據中提取關鍵指標\n    const stats = msg.payload;\n    \n    // 創建顯示卡片數據\n    const summaryData = [\n        {\n            title: \"床位佔用率\",\n            value: stats.occupancyRate ? `${stats.occupancyRate}%` : \"0%\",\n            icon: \"hotel\",\n            color: stats.occupancyRate > 80 ? \"#e74c3c\" : (stats.occupancyRate > 60 ? \"#f39c12\" : \"#2ecc71\")\n        },\n        {\n            title: \"入院總數\",\n            value: stats.admissions || 0,\n            icon: \"person_add\",\n            color: \"#3498db\"\n        },\n        {\n            title: \"平均住院天數\",\n            value: stats.avgStayDays || 0,\n            icon: \"date_range\",\n            color: \"#9b59b6\"\n        },\n        {\n            title: \"最長住院天數\",\n            value: stats.maxStayDays || 0,\n            icon: \"timer\",\n            color: \"#34495e\"\n        }\n    ];\n    \n    // 返回統計摘要數據\n    return { payload: summaryData };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 1720,
+        "wires": [
+            [
+                "b43545e7086ddbcc"
+            ]
+        ]
+    },
+    {
+        "id": "b43545e7086ddbcc",
+        "type": "ui_template",
+        "z": "7123022d2d45c449",
+        "group": "663bf54657b2f2d8",
+        "name": "統計卡片",
+        "order": 1,
+        "width": 24,
+        "height": 3,
+        "format": "<div class=\"stat-cards-container\">\n    <div class=\"stat-card\" ng-repeat=\"card in msg.payload\" style=\"border-left: 4px solid {{card.color}}\">\n        <div class=\"stat-icon\" style=\"color: {{card.color}}\">\n            <i class=\"material-icons\">{{card.icon}}</i>\n        </div>\n        <div class=\"stat-content\">\n            <div class=\"stat-value\">{{card.value}}</div>\n            <div class=\"stat-label\">{{card.title}}</div>\n        </div>\n    </div>\n</div>\n\n<style>\n.stat-cards-container {\n    display: flex;\n    flex-wrap: wrap;\n    gap: 16px;\n    justify-content: space-between;\n    width: 100%;\n}\n\n.stat-card {\n    flex: 1;\n    min-width: 200px;\n    background-color: white;\n    border-radius: 8px;\n    box-shadow: 0 2px 4px rgba(0,0,0,0.1);\n    padding: 16px;\n    display: flex;\n    align-items: center;\n}\n\n.stat-icon {\n    margin-right: 16px;\n}\n\n.stat-icon i {\n    font-size: 36px;\n}\n\n.stat-content {\n    display: flex;\n    flex-direction: column;\n}\n\n.stat-value {\n    font-size: 24px;\n    font-weight: bold;\n    margin-bottom: 4px;\n}\n\n.stat-label {\n    font-size: 14px;\n    color: #666;\n}\n</style>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1840,
+        "y": 1720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5b60f299f8ab16af",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備佔用率圖表",
+        "func": "// 格式化數據以適合圖表\nif (msg.payload && msg.payload.timeLabels && msg.payload.occupancyData) {\n    const data = [\n        {\n            series: [\"床位佔用率 (%)\"],\n            data: [msg.payload.occupancyData],\n            labels: msg.payload.timeLabels\n        }\n    ];\n    \n    return { payload: data };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 1760,
+        "wires": [
+            [
+                "39d33d5c24e8cd20"
+            ]
+        ]
+    },
+    {
+        "id": "39d33d5c24e8cd20",
+        "type": "ui_chart",
+        "z": "7123022d2d45c449",
+        "name": "床位佔用率趨勢",
+        "group": "663bf54657b2f2d8",
+        "order": 6,
+        "width": 12,
+        "height": 6,
+        "label": "床位佔用率趨勢",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "載入中...",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#c65353",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1860,
+        "y": 1760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0ffb45f429e08df1",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備入出院圖表",
+        "func": "// 格式化數據以適合圖表\nif (msg.payload && msg.payload.timeLabels) {\n    const data = [\n        {\n            series: [\"入院人數\", \"出院人數\", \"轉床人數\"],\n            data: [\n                msg.payload.admissionData || [],\n                msg.payload.dischargeData || [],\n                msg.payload.transferData || []\n            ],\n            labels: msg.payload.timeLabels\n        }\n    ];\n    \n    return { payload: data };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 1800,
+        "wires": [
+            [
+                "0dca7162d7ef94ef"
+            ]
+        ]
+    },
+    {
+        "id": "0dca7162d7ef94ef",
+        "type": "ui_chart",
+        "z": "7123022d2d45c449",
+        "name": "入出院數據",
+        "group": "663bf54657b2f2d8",
+        "order": 7,
+        "width": 12,
+        "height": 6,
+        "label": "入出院數據",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "載入中...",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#74b47e",
+            "#e74c3c",
+            "#f1c40f",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1850,
+        "y": 1800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bb61cd478ede22e",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備週趨勢圖表",
+        "func": "// 格式化數據以適合圖表\nif (msg.payload && msg.payload.weekDays) {\n    const data = [\n        {\n            series: [\"入院人數\", \"出院人數\"],\n            data: [\n                msg.payload.weeklyAdmissions || [],\n                msg.payload.weeklyDischarges || []\n            ],\n            labels: msg.payload.weekDays\n        }\n    ];\n    \n    return { payload: data };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 2240,
+        "wires": [
+            [
+                "d896ced4273f41e8"
+            ]
+        ]
+    },
+    {
+        "id": "d896ced4273f41e8",
+        "type": "ui_chart",
+        "z": "7123022d2d45c449",
+        "name": "本週入出院情況",
+        "group": "663bf54657b2f2d8",
+        "order": 18,
+        "width": 24,
+        "height": 6,
+        "label": "本週入出院情況",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "載入中...",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#df9f9f",
+            "#bf4040",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1860,
+        "y": 2240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8747a0e246e262c",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "每日按鈕",
+        "group": "663bf54657b2f2d8",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "每日",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#a46565",
+        "className": "",
+        "icon": "today",
+        "payload": "{\"action\":\"filter-time\",\"range\":\"day\"}",
+        "payloadType": "json",
+        "topic": "filter-time",
+        "topicType": "str",
+        "x": 260,
+        "y": 1900,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "0426bbe4b70976d4",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "每週按鈕",
+        "group": "663bf54657b2f2d8",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "每週",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#a46565",
+        "className": "",
+        "icon": "view_week",
+        "payload": "{\"action\":\"filter-time\",\"range\":\"week\"}",
+        "payloadType": "json",
+        "topic": "filter-time",
+        "topicType": "str",
+        "x": 260,
+        "y": 1840,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "d1fac25e2e61de28",
+        "type": "ui_button",
+        "z": "7123022d2d45c449",
+        "name": "每月按鈕",
+        "group": "663bf54657b2f2d8",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "每月",
+        "tooltip": "",
+        "color": "#ffffff",
+        "bgcolor": "#a46565",
+        "className": "",
+        "icon": "view_module",
+        "payload": "{\"action\":\"filter-time\",\"range\":\"month\"}",
+        "payloadType": "json",
+        "topic": "filter-time",
+        "topicType": "str",
+        "x": 260,
+        "y": 1780,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "751df3fca24656e3",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "系統初始化",
+        "func": "// 系統初始化函數\n// 清除可能過期的數據\nflow.set('currentPage', 'dashboard');\n\n// 觸發統計數據初始化載入\nreturn {\n    payload: {\n        action: 'refresh-stats',\n        initialization: true\n    }\n};",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "// 初始化時記錄系統啟動日誌\nnode.log('醫院床位管理系統初始化中...');\n\n// 返回初始化消息，觸發系統初始載入\nreturn {\n    payload: {\n        action: 'refresh-stats',\n        initialization: true\n    }\n};",
+        "finalize": "",
+        "libs": [],
+        "x": 270,
+        "y": 2080,
+        "wires": [
+            [
+                "e7f3d9881c4dcfee"
+            ]
+        ]
+    },
+    {
+        "id": "fe562b3092a0d514",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備科室分佈圖表",
+        "func": "// 格式化數據以適合垂直條形圖\nif (msg.payload && msg.payload.departments) {\n    const data = [\n        {\n            series: [\"床位數\"],\n            data: [msg.payload.departmentData || []],\n            labels: msg.payload.departments\n        }\n    ];\n    \n    // 給每個科室添加佔用率數據用於tooltip\n    if (msg.payload.departmentOccupancyRates) {\n        msg.occupancyRates = msg.payload.departmentOccupancyRates;\n    }\n    \n    // 設置額外的圖表配置以確保X軸標籤完全顯示\n    msg.ui_control = {\n        options: {\n            scales: {\n                xAxes: [{\n                    ticks: {\n                        autoSkip: false,  // 防止標籤被跳過\n                        maxRotation: 45,  // 旋轉標籤以節省空間\n                        minRotation: 45   // 最小旋轉角度\n                    }\n                }]\n            }\n        }\n    };\n    \n    return { payload: data };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1550,
+        "y": 1840,
+        "wires": [
+            [
+                "ee0cf3af0cab8795"
+            ]
+        ]
+    },
+    {
+        "id": "ee0cf3af0cab8795",
+        "type": "ui_chart",
+        "z": "7123022d2d45c449",
+        "name": "科室床位分佈",
+        "group": "663bf54657b2f2d8",
+        "order": 8,
+        "width": 12,
+        "height": 9,
+        "label": "科室床位分佈",
+        "chartType": "bar",
+        "legend": "true",
+        "xformat": "auto",
+        "interpolate": "linear",
+        "nodata": "載入中...",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#d27979",
+            "#cc6666",
+            "#d98c8c",
+            "#df9f9f",
+            "#c65353",
+            "#bf4040",
+            "#ac3939",
+            "#e3cfcf",
+            "#e6b3b3"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1860,
+        "y": 1840,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e8991b088af73670",
+        "type": "function",
+        "z": "7123022d2d45c449",
+        "name": "準備科室佔用率儀表板",
+        "func": "// 處理科室佔用率數據分發給多個儀表盤\nif (msg.payload && msg.payload.departments && msg.payload.departmentOccupancyRates) {\n    const departments = msg.payload.departments;\n    const occupancyRates = msg.payload.departmentOccupancyRates;\n    \n    // 創建儀表盤消息陣列，每個科室佔一個位置\n    const output = [];\n    \n    // 將數據分配到9個輸出（對應9個不同的儀表盤）\n    for (let i = 0; i < 9; i++) {\n        if (i < departments.length) {\n            // 為這個科室創建一個儀表盤消息\n            output[i] = {\n                topic: departments[i],\n                payload: occupancyRates[i],\n                deptName: departments[i]  // 用於顯示科室名稱\n            };\n        } else {\n            // 如果沒有更多科室，傳遞空值\n            output[i] = null;\n        }\n    }\n    \n    return output;\n}\n\n// 如果沒有數據，所有輸出都是null\nreturn [null, null, null, null, null, null, null, null, null];",
+        "outputs": 9,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 2040,
+        "wires": [
+            [
+                "3d8d940ed2b842d4"
+            ],
+            [
+                "f506d4d4a5d75135"
+            ],
+            [
+                "e0ef56b7c79de7a2"
+            ],
+            [
+                "4302411058beba41"
+            ],
+            [
+                "990146fe3c2e98d9"
+            ],
+            [
+                "eb1bd8957187cffa"
+            ],
+            [
+                "78be16d64b80cbdf"
+            ],
+            [
+                "8012c1ba7f6e3ee3"
+            ],
+            [
+                "1f189b4218a1cfac"
+            ]
+        ]
+    },
+    {
+        "id": "3d8d940ed2b842d4",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室1佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 9,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "f506d4d4a5d75135",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室2佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 10,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "e0ef56b7c79de7a2",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室3佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 11,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "4302411058beba41",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室4佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 12,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "990146fe3c2e98d9",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室5佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 13,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "eb1bd8957187cffa",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室6佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 14,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "78be16d64b80cbdf",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室7佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 15,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "8012c1ba7f6e3ee3",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室8佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 16,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "1f189b4218a1cfac",
+        "type": "ui_gauge",
+        "z": "7123022d2d45c449",
+        "name": "科室9佔用率",
+        "group": "663bf54657b2f2d8",
+        "order": 17,
+        "width": 4,
+        "height": 3,
+        "gtype": "gage",
+        "title": "{{msg.deptName}}",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#74b47e",
+            "#f39c12",
+            "#e74c3c"
+        ],
+        "seg1": "80",
+        "seg2": "90",
+        "diff": false,
+        "className": "",
+        "x": 1850,
+        "y": 2200,
+        "wires": []
+    },
+    {
+        "id": "be2e92b909270557",
+        "type": "comment",
+        "z": "7123022d2d45c449",
+        "name": "統計報表",
+        "info": "",
+        "x": 120,
+        "y": 1640,
+        "wires": []
+    }
+]
